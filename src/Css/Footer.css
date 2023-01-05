@@ -1,0 +1,21 @@
+footer{
+    background-color:#3949AB;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    bottom: 1px;
+    padding: 5px;
+    height: 50px;
+    min-width: 100%;
+    font-size: 10px;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    color: white;
+    width: 300px;
+    flex: 0.3;
+    font-size: 12px;
+    font-weight: bolder 2px;
+  } 
