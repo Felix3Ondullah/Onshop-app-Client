@@ -1,5 +1,13 @@
 import React from "react";
-import { AppBar,Toolbar, CssBaseline, Typography, makeStyles, useTheme, useMediaQuery} from "@material-ui/core";
+import {
+  AppBar,
+  Toolbar,
+  CssBaseline,
+  Typography,
+  makeStyles,
+  useTheme,
+  useMediaQuery,
+} from "@material-ui/core";
 import { Link } from "react-router-dom";
 import DrawerComponent from "./Drawer";
 
@@ -35,7 +43,6 @@ function Navbar() {
       <Toolbar>
         <Typography variant="h4" className={classes.logo}>
           OnShop-App
-          
         </Typography>
         {isMobile ? (
           <DrawerComponent />
