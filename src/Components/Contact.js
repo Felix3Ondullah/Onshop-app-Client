@@ -1,18 +1,19 @@
 import React from "react";
-import image from "../Assets/cart3.jpg";
+// import image from "../Assets/bg.jpg";
 
 const Contact = () => {
   return (
-    <div
-      style={{
-        backgroundImage: `url(${image})`,
-        position: "fixed",
-        backgroundSize: "cover",
-        height: "100vh",
-        backgroundRepeat: "no-repeat",
-        width: "215vh",
-      }}
-    >
+    // <div
+    //   style={{
+    //     backgroundImage: `url(${image})`,
+    //     position: "fixed",
+    //     backgroundSize: "cover",
+    //     height: "100vh",
+    //     backgroundRepeat: "no-repeat",
+    //     width: "236vh",
+    //     backgroundPosition: ''
+    //   }}
+    // >
       <div className="container mt-5 w-50" position="center">
         <h2 className="mb-3">Get in Touch</h2>
         <form>
@@ -54,7 +55,7 @@ const Contact = () => {
           </button>
         </form>
       </div>
-    </div>
+    // </div>
   );
 };
 export default Contact;
