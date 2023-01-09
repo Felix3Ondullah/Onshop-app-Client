@@ -1,8 +1,16 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import React from "react";
 import "../Css/Home.css"
+import {useNavigate} from 'react-router-dom';
 
 function Home() {
+  //navigatee to search page
+
+  const navigate = useNavigate();
+  const navigateToSearch =() => {
+    navigate('/search');
+  };
+
   return (
     <div className="mainsection">
       <main>
@@ -32,7 +40,7 @@ function Home() {
                 sunt in culpa qui officia deserunt mollit anim id est laborum."
               </p>
               <div>
-              < Button variant="outline-primary"> Search Product</Button>
+              < Button  onClick={navigateToSearch} variant="outline-primary" > Search Product</Button>
               </div>
             </Col>
           </Row>

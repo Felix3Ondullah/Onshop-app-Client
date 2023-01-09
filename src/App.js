@@ -5,7 +5,8 @@ import Home from "./Components/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Footer from "./Components/Footer";
-import { Search } from "@material-ui/icons";
+import Search from "./Components/Search";
+
 
 function App() {
   return (
