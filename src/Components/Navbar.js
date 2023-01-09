@@ -51,14 +51,14 @@ function Navbar() {
             <Link to="/" className={classes.link}>
               Home
             </Link>
-            <Link to="/search" className={classes.link}>
-              Search
-            </Link>
             <Link to="/contact" className={classes.link}>
               Contact Us
             </Link>
             <Link to="/searchHistory" className={classes.link}>
               searchHistory
+            </Link>
+            <Link to="/login" className={classes.link}>
+              Login
             </Link>
           </div>
         )}

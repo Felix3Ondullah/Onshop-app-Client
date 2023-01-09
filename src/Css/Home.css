@@ -28,10 +28,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.SendNow{
-    display: inline-block;
-    font-size: 1.3rem;
-    text-decoration: none;
-    color: whitesmoke;
-    padding: 0.5em 1.5em;
+.btn{
+    color: #3949AB;
 }
