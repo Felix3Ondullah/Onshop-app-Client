@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 import {
   AppBar,
   Toolbar,
@@ -55,10 +56,13 @@ function Navbar() {
               Contact Us
             </Link>
             <Link to="/searchHistory" className={classes.link}>
-              searchHistory
+              History
             </Link>
             <Link to="/login" className={classes.link}>
-              Login
+              <Button>Login</Button>
+            </Link>
+            <Link to="/login" className={classes.link}>
+              <Button>Log Out</Button>
             </Link>
           </div>
         )}
