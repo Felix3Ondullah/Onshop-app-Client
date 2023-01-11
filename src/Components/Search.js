@@ -3,6 +3,7 @@ import axios from "axios";
 import BootstrapTable from "react-bootstrap-table-next";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import paginationFactory from "react-bootstrap-table2-paginator";
+import filterFactory,{textFilter} from "react-bootstrap-table2-filter";
 
 
 function Search() {
@@ -15,9 +16,9 @@ function Search() {
     // console.log(res.data)
   };
   const columns = [
-    { dataField: "product", text: "Product", sort: true },
-    { dataField: "price", text: "Price", sort: true },
-    { dataField: "rating", text: "Rating", sort: true },
+    { dataField: "product", text: "Product", sort: true, filter:textFilter() },
+    { dataField: "price", text: "Price", sort: true, filter:textFilter() },
+    { dataField: "rating", text: "Rating", sort: true, filter:textFilter()},
   ];
 
 
@@ -25,7 +26,8 @@ function Search() {
   return (
     <div>
       <BootstrapTable bootstrap7  keyField="id" data={product} columns={columns}
-        pagination={paginationFactory()}  />
+        pagination={paginationFactory()} 
+        filter ={filterFactory()} />
     </div>
   );
 }
