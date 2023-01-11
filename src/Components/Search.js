@@ -1,40 +1,31 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import BootstrapTable from "react-bootstrap-table-next";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import paginationFactory from "react-bootstrap-table2-paginator";
+
 
 function Search() {
-  const [ProductList, setProductList] = useState();
-
+  const [product, setProduct] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3004/products")
-      .then((response) => response.json())
-      .then((result) => setProductList(result))
-      .catch((error) => console.log(error));
+    getData();
   }, []);
+  const getData = () => {
+    axios("http://localhost:3004/products").then((res) => setProduct(res.data));
+    // console.log(res.data)
+  };
+  const columns = [
+    { dataField: "product", text: "Product", sort: true },
+    { dataField: "price", text: "Price", sort: true },
+    { dataField: "rating", text: "Rating", sort: true },
+  ];
+
+
 
   return (
     <div>
-      <table class="table table-bordered">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col"> Image</th>
-            <th scope="col">Product</th>
-            <th scope="col"> Price</th>
-            <th scope="col"> Rating</th>
-          </tr>
-        </thead>
-
-        {ProductList && ProductList.length > 0
-          ? ProductList.map((product) => (
-              <tbody>
-                <tr>
-                  <td>{product.img}</td>
-                  <td>{product.product}</td>
-                  <td>{product.price}</td>
-                  <td>{product.rating}</td>
-                </tr>
-              </tbody>
-            ))
-          : "Loading"}
-      </table>
+      <BootstrapTable bootstrap7  keyField="id" data={product} columns={columns}
+        pagination={paginationFactory()}  />
     </div>
   );
 }
