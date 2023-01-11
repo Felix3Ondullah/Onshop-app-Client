@@ -9,7 +9,29 @@ function Search() {
       .catch((error) => console.log(error));
   }, []);
 
-  return <div>Search Products</div>;
+  return <div>
+    <table>
+      <tr>
+        <th>Image</th>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Rating</th>
+      </tr>
+      {
+        ProductList && ProductList.length> 0 ?
+        ProductList.map(product =>
+    <tr>
+      <td>{product.img}</td>
+      <td>{product.product}</td>
+      <td>{product.price}</td>
+      <td>{product.rating}</td>
+    </tr>
+    )
+      :'Loading'
+      }
+    </table>
+
+  </div>;
 }
 
 export default Search;
