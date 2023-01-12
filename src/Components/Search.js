@@ -8,6 +8,7 @@ function Search() {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(5);
+  const [sortOrder, setSortOrder] = useState("ascending");
 
   useEffect(() => {
     fetch("http://localhost:3005/products")
@@ -21,11 +22,17 @@ function Search() {
     );
     if (sortBy === "price") {
       filteredData.sort((a, b) => (a.price > b.price ? 1 : -1));
-    } else if (sortBy === "rating") {
+    }  else if (sortBy === "rating") {
       filteredData.sort((a, b) => (a.rating > b.rating ? 1 : -1));
     }
+
+    if (sortOrder === "ascending") {
+      filteredData.sort((a, b) => (a.ascending > b.ascending? 1 : -1));
+    } else if (sortOrder === "descending") {
+      filteredData.sort((a, b) => (a.descending > b.descending ? 1 : -1));
+    } 
     setFilteredProducts(filteredData);
-  }, [searchTerm, sortBy, products]);
+  }, [searchTerm, sortBy,sortOrder, products]);
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -42,6 +49,9 @@ function Search() {
   const handleSortChange = (value) => {
     setSortBy(value);
   };
+  const handleOrderChange = (value) => {
+    setSortOrder(value);
+  };
 
   return (
     <div>
@@ -55,18 +65,28 @@ function Search() {
           Search Product
         </Button>
         <Button onClick={() => setSearchTerm("")}>Clear</Button>
-        <Select defaultValue="price" onChange={handleSortChange}>
-          <Select.Option value="price">Sort by Price</Select.Option>
-          <Select.Option value="rating">Sort by Rating</Select.Option>
-        </Select>
+        <div style={{ margin: "16px 0" }}>
+          <Select defaultValue="price" onChange={handleSortChange}>
+            <Select.Option value="price">Compare by Price</Select.Option>
+            <Select.Option value="rating">Comapre by Rating</Select.Option>
+          </Select>
+          <Select defaultValue="ascending" onChange={handleOrderChange}>
+            <Select.Option value="ascending">
+              Compare by Ascending Order
+            </Select.Option>
+            <Select.Option value="decending">
+              Compare by Decending Order{" "}
+            </Select.Option>
+          </Select>
+        </div>
       </form>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         {currentProducts.map((product) => (
           <Card
             key={product.id}
             cover={<img src={product.image} alt={product.name} />}
-            style={{ width: 300, margin: "16px" }}
-             title={product.shop}
+            style={{ width: 250, margin: "16px" }}
+            title={product.shop}
           >
             <Card.Meta
               title={product.name}
