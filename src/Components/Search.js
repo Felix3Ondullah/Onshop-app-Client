@@ -1,6 +1,6 @@
-import React, { useState,  } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
-import { Card, Input, Button, Pagination } from 'antd';
+import { Card, Input, Button, Pagination,Select } from 'antd';
 
 
 function Search() {
@@ -8,17 +8,21 @@ function Search() {
   const [searchTerm, setSearchTerm] = useState('');
   const [totalPages, setTotalPages] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
+  const [sortBy, setSortBy] = useState('price');
+  const [sortOrder, setSortOrder] = useState('asc');
   
   // useEffect(() => {
   //   fetchData();
-  // }, []);
+  // }, [searchTerm, sortBy, sortOrder, currentPage]);
   
   const fetchData = async () => {
     try {
         const response = await axios.get(`http://localhost:3006/products`, {
           params: {
             search: searchTerm,
-            page: currentPage
+            page: currentPage,
+            sortBy: sortBy,
+           sortOrder: sortOrder,
           }
         });
         setProducts(response.data.data);
@@ -32,6 +36,14 @@ function Search() {
     fetchData();
   };
 
+  const handleSortChange = (value) => {
+    setSortBy(value);
+  };
+
+  const handleOrderChange = (value) => {
+    setSortOrder(value);
+  };
+
   const onChangePage = (page) => {
     setCurrentPage(page);
     fetchData();
@@ -41,6 +53,27 @@ function Search() {
     <div>
       <Input placeholder="Search for products" onChange={(e) => setSearchTerm(e.target.value)} />
       <Button type="primary" onClick={handleSearch}>Search</Button>
+
+      <div style={{ margin: '16px 0' }}>
+        <Select
+          defaultValue="price"
+          onChange={handleSortChange}
+          style={{ width: 120, marginRight: '16px' }}
+        >
+          <Select.Option value="price">Price</Select.Option>
+          <Select.Option value="rating">Rating</Select.Option>
+          <Select.Option value="name">Name</Select.Option>
+        </Select>
+        <Select
+          defaultValue="asc"
+          onChange={handleOrderChange}
+          style={{ width: 120 }}
+        >
+          <Select.Option value="asc">Ascending</Select.Option>
+          <Select.Option value="desc">Descending</Select.Option>
+        </Select>
+      </div>
+
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         {products.map(product => (
           <Card
