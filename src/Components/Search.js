@@ -15,7 +15,7 @@ function Search() {
       .then((response) => response.json())
       .then((data) => setProducts(data));
   }, []);
-
+  //filtering and sorting of products
   useEffect(() => {
     let filteredData = products.filter((product) =>
       product.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -97,10 +97,13 @@ function Search() {
           </Card>
         ))}
       </div>
-      <Pagination
+       <Pagination
         defaultCurrent={1}
-        total={totalPages}
+        current={currentPage}
+        total={totalPages * 10}
         onChange={handlePageChange}
+        style={{ margin: "20px 0" }}
+      
       />
     </div>
   );
