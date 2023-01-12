@@ -1,99 +1,80 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { Card, Input, Select, Pagination } from "antd";
-
-// const { Option } = Select;
+import React, { useState, useEffect } from 'react';
+import { Card, Input, Button, Pagination, Select } from 'antd';
 
 function Search() {
   const [products, setProducts] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [sortBy, setSortBy] = useState("price");
-  const [sortOrder, setSortOrder] = useState("asc");
-  const [filter, setFilter] = useState("");
-  const [totalPages, setTotalPages] = useState(0);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('price');
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [productsPerPage] = useState(5);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios(
-        `http://localhost:3005/products?q=${searchTerm}&sort=${sortBy}&filter=${filter}&page=${currentPage}`
-      );
-      setProducts(result.data);
-    };
+    fetch('http://localhost:3005/products')
+      .then(response => response.json())
+      .then(data => setProducts(data));
+  }, []);
 
-    fetchData();
-  }, [searchTerm, sortBy, filter, currentPage, sortOrder]);
+  useEffect(() => {
+    let filteredData = products.filter(product =>
+      product.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    if (sortBy === 'price') {
+      filteredData.sort((a, b) => (a.price > b.price) ? 1 : -1);
+    } else if (sortBy === 'rating') {
+      filteredData.sort((a, b) => (a.rating > b.rating) ? 1 : -1);
+    }
+    setFilteredProducts(filteredData);
+  }, [searchTerm, sortBy, products]);
 
-  const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value);
-  };
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  }
 
   const handleSortChange = (value) => {
     setSortBy(value);
-  };
-
-  const handleFilterChange = (value) => {
-    setFilter(value);
-  };
-
-  const onChangePage = (page) => {
-    if (typeof page === "string") {
-      page = parseFloat(page);
-    }
-    if (isNaN(page)) {
-      console.log("Page is not a number");
-      return;
-    }
-    setCurrentPage(page);
-  };
-
-  const handleOrderChange = (value) => {
-    setSortOrder(value);
-  };
+  }
 
   return (
     <div>
-      <Input placeholder="Search for products" onChange={handleSearchChange} />
-      <Select
-        defaultValue="price"
-        style={{ width: 120 }}
-        onChange={handleSortChange}
-      >
-        <Select.Option value="price">Price</Select.Option>
-        <Select.Option value="rating">Rating</Select.Option>
-      </Select>
-      <Select
-        defaultValue=""
-        onChange={handleOrderChange}
-        style={{ width: 120 }}
-      >
-        <Select.Option value="">All</Select.Option>
-        <Select.Option value="asc">Ascending</Select.Option>
-        <Select.Option value="dsc">Descending</Select.Option>
-      </Select>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
-        {products.map((product) => (
-          <Card
-            key={product.id}
-            cover={<img src={product.image} alt={product.name} />}
-            style={{ width: 300, margin: "16px" }}
-          >
-            <Card.Meta
-              title={product.name}
-              description={`Price: $${product.price} | Rating: ${product.rating}`}
-            />
-          </Card>
-        ))}
+      <form onSubmit={event => event.preventDefault()}>
+        <Input
+          placeholder="Search Products"
+          value={searchTerm}
+          onChange={event => setSearchTerm(event.target.value)}
+        />
+        <Button type="primary" htmlType="submit">Search</Button>
+        <Button onClick={() => setSearchTerm('')}>Clear</Button>
+        <Select defaultValue="price" onChange={handleSortChange}>
+          <Select.Option value="price">Sort by Price</Select.Option>
+          <Select.Option value="rating">Sort by Rating</Select.Option>
+        </Select>
+      </form>
+  <div style={{ display: "flex", flexWrap: "wrap" }}>>
+      {currentProducts.map(product => (
+        <Card
+          key={product.id}
+          cover={<img src={product.image} alt={product.name} />}
+          style={{ width: 300, margin: "16px" }}
+          title={product.name}
+        >
+          <p>Price: {product.price}</p>
+          <p>Rating: {product.rating}</p>
+        </Card>
+      ))}
       </div>
-      <Pagination
+      <Pagination 
         defaultCurrent={1}
-        current={currentPage}
-        total={totalPages * 10}
-        onChange={onChangePage}
-        style={{ margin: "20px 0" }}
+        total={totalPages}
+        onChange={handlePageChange}
       />
     </div>
   );
 }
 
-export default Search;
+export default Search
