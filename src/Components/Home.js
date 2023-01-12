@@ -33,7 +33,7 @@ function Home() {
                 <strong>Search </strong> And <strong> Compare </strong> Products
                 With On-Shop
               </h1>
-              <p class="mt-4 " style={{ fontSize: "20px" }}>
+              <p class="mt-4 " style={{ fontSize: "16px" }}>
                 On-Shop is your ultimate shopping companion. Our app helps you
                 search and compare products from a wide range of retailers, all
                 in one place. Whether you're looking for the latest gadgets,
