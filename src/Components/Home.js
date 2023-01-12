@@ -30,7 +30,7 @@ function Home() {
             </Col>
             <Col sm={5}>
               <h1 class="font-weigh-light">
-                Search And Compare Products With On-Shop
+                <strong>Search </strong> And <strong> Compare </strong> Products With On-Shop
               </h1>
               <p class="mt-4 " style={{ fontSize: "20px" }}>
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -43,7 +43,7 @@ function Home() {
               </p>
               <div>
                 <Button
-                  className="btn"
+                  className="btn btn-lg"
                   onClick={navigateToSearch}
                   variant="outline-primary"
                 >

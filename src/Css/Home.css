@@ -5,6 +5,7 @@
     background-image: url("../Assets/shopping2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    height:fit-content;
     min-height: 100vh;
     width:100%;
     /* color: whitesmoke; */
