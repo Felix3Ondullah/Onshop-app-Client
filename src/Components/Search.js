@@ -1,27 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Card, Input, Select,Pagination } from 'antd';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { Card, Input, Select, Pagination } from "antd";
 
-const { Option } = Select;
+// const { Option } = Select;
 
 function Search() {
   const [products, setProducts] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('price');
-  const [filter, setFilter] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [sortBy, setSortBy] = useState("price");
+  const [sortOrder, setSortOrder] = useState("asc");
+  const [filter, setFilter] = useState("");
   const [totalPages, setTotalPages] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
-        `http://localhost:3009/products?q=${searchTerm}&sort=${sortBy}&filter=${filter}`
+        `http://localhost:3005/products?q=${searchTerm}&sort=${sortBy}&filter=${filter}&page=${currentPage}`
       );
       setProducts(result.data);
     };
 
     fetchData();
-  }, [searchTerm, sortBy, filter, currentPage,]);
+  }, [searchTerm, sortBy, filter, currentPage, sortOrder]);
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
@@ -35,15 +36,19 @@ function Search() {
     setFilter(value);
   };
 
-    const onChangePage = (page) => {
-    if (typeof page === 'string') {
-      page = parseFloat(page)
-  }
-  if (isNaN(page)) {
-      console.log('Page is not a number');
+  const onChangePage = (page) => {
+    if (typeof page === "string") {
+      page = parseFloat(page);
+    }
+    if (isNaN(page)) {
+      console.log("Page is not a number");
       return;
-  }
-  setCurrentPage(page)
+    }
+    setCurrentPage(page);
+  };
+
+  const handleOrderChange = (value) => {
+    setSortOrder(value);
   };
 
   return (
@@ -54,25 +59,24 @@ function Search() {
         style={{ width: 120 }}
         onChange={handleSortChange}
       >
-        <Option value="price">Price</Option>
-        <Option value="rating">Rating</Option>
+        <Select.Option value="price">Price</Select.Option>
+        <Select.Option value="rating">Rating</Select.Option>
       </Select>
       <Select
         defaultValue=""
+        onChange={handleOrderChange}
         style={{ width: 120 }}
-        onChange={handleFilterChange}
       >
-        <Option value="">All</Option>
-        <Option value="asc">Ascending</Option>
-        <Option value="dsc">Descending</Option>
-    
+        <Select.Option value="">All</Select.Option>
+        <Select.Option value="asc">Ascending</Select.Option>
+        <Select.Option value="dsc">Descending</Select.Option>
       </Select>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
         {products.map((product) => (
           <Card
             key={product.id}
             cover={<img src={product.image} alt={product.name} />}
-            style={{ width: 300, margin: '16px' }}
+            style={{ width: 300, margin: "16px" }}
           >
             <Card.Meta
               title={product.name}
