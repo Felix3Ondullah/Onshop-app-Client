@@ -55,16 +55,21 @@ function Search() {
           <Select.Option value="rating">Sort by Rating</Select.Option>
         </Select>
       </form>
-  <div style={{ display: "flex", flexWrap: "wrap" }}>>
+  <div style={{ display: "flex", flexWrap: "wrap" }}>
       {currentProducts.map(product => (
         <Card
           key={product.id}
-          cover={<img src={product.image} alt={product.name} />}
+          cover={<img src={product.image} 
+          alt={product.name} />}
           style={{ width: 300, margin: "16px" }}
-          title={product.name}
+          // title={product.name}
         >
-          <p>Price: {product.price}</p>
-          <p>Rating: {product.rating}</p>
+          <Card.Meta
+              title={product.name}
+              description={`Price: ${product.price} | Rating: ${product.rating}`}
+            />
+          {/* <p>Price: {product.price}</p>
+          <p>Rating: {product.rating}</p> */}
         </Card>
       ))}
       </div>

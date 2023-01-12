@@ -56,7 +56,7 @@ function Navbar() {
               Contact Us
             </Link>
             <Link to="/searchHistory" className={classes.link}>
-              History
+              Search History
             </Link>
             <Link to="/login" className={classes.link}>
               <Button>Login</Button>
