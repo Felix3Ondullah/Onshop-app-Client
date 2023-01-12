@@ -1,14 +1,14 @@
 import React from "react";
-import "../Css/Footer.css";
+// import "../Css/Footer.css";
 
 const Footer = () => {
   return (
     <div className="copyright">
-      <footer>
-        <div>
-          <p>All rights reserverd &copy;</p>
-        </div>
-      </footer>
+    <footer class="bg-light fixed-bottom">
+  <div class="container py-3">
+    <p class="text-center text-muted">Copyright © My Website</p>
+  </div>
+</footer>
     </div>
   );
 };
