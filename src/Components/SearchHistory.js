@@ -5,7 +5,7 @@ const SearchHistory = () => {
 const [searchHistory, setSearchHistory] = useState([]);
 const [searchValue, setSearchValue] = useState("");
 const [currentPage, setCurrentPage] = useState(1);
-const [pageSize, setPageSize] = useState(10);
+const [pageSize, setPageSize] = useState(8);
 
 useEffect(() => {
 fetchSearchHistory();
@@ -79,7 +79,6 @@ total={filteredHistory.length}
 onChange={handlePageChange}
 showSizeChanger
 onShowSizeChange={handlePageSizeChange}
-showTotal={(total) => `Total ${total} items`}
 />
 </div>
 );

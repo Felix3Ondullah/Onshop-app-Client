@@ -15,7 +15,7 @@ function Search() {
       .then((response) => response.json())
       .then((data) => setProducts(data));
   }, []);
-
+  //filtering and sorting of products
   useEffect(() => {
     let filteredData = products.filter((product) =>
       product.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -57,14 +57,19 @@ function Search() {
     <div>
       <form onSubmit={(event) => event.preventDefault()}>
         <Input
-          placeholder="Search Products"
+          placeholder="Search Products Here"
+          allowClear
+          style={{
+            width: 300,
+          }}
+          size="large"
           value={searchTerm}
           onChange={(event) => setSearchTerm(event.target.value)}
         />
-        <Button type="primary" htmlType="submit">
-          Search Product
+        <Button type="primary" htmlType="submit"  size="large">
+          Search Product 
         </Button>
-        <Button onClick={() => setSearchTerm("")}>Clear</Button>
+        <Button onClick={() => setSearchTerm("")}  size="large">Clear</Button>
         <div style={{ margin: "16px 0" }}>
           <Select defaultValue="price" onChange={handleSortChange}>
             <Select.Option value="price">Compare by Price</Select.Option>
@@ -97,10 +102,13 @@ function Search() {
           </Card>
         ))}
       </div>
-      <Pagination
+       <Pagination
         defaultCurrent={1}
-        total={totalPages}
+        current={currentPage}
+        total={totalPages * 10}
         onChange={handlePageChange}
+        style={{ margin: "20px 0" }}
+      
       />
     </div>
   );
