@@ -13,6 +13,11 @@ const SearchHistory = () => {
   }, []);
 
   const handleSearch = () => {
+
+    fetch(`https://api.example.com/user/search-history?term=${searchTerm}`)
+      .then(res => res.json())
+      .then(data => setSearchHistory(data))
+      .catch(err => console.error(err));
     
   }
 
