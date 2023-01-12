@@ -57,14 +57,19 @@ function Search() {
     <div>
       <form onSubmit={(event) => event.preventDefault()}>
         <Input
-          placeholder="Search Products"
+          placeholder="Search Products Here"
+          allowClear
+          style={{
+            width: 300,
+          }}
+          size="large"
           value={searchTerm}
           onChange={(event) => setSearchTerm(event.target.value)}
         />
-        <Button type="primary" htmlType="submit">
-          Search Product
+        <Button type="primary" htmlType="submit"  size="large">
+          Search Product 
         </Button>
-        <Button onClick={() => setSearchTerm("")}>Clear</Button>
+        <Button onClick={() => setSearchTerm("")}  size="large">Clear</Button>
         <div style={{ margin: "16px 0" }}>
           <Select defaultValue="price" onChange={handleSortChange}>
             <Select.Option value="price">Compare by Price</Select.Option>
