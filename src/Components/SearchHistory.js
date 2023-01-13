@@ -13,7 +13,7 @@ fetchSearchHistory();
 
 const fetchSearchHistory = async () => {
 try {
-const response = await fetch("http://localhost:3005/products");
+const response = await fetch("http://localhost:3007/products");
 const data = await response.json();
 setSearchHistory(data);
 } catch (error) {

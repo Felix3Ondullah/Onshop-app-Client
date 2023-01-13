@@ -7,11 +7,11 @@ function Search() {
   const [sortBy, setSortBy] = useState("price");
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [productsPerPage] = useState(5);
+  const [productsPerPage] = useState(10);
   const [sortOrder, setSortOrder] = useState("ascending");
 
   useEffect(() => {
-    fetch("http://localhost:3005/products")
+    fetch("http://localhost:3007/products")
       .then((response) => response.json())
       .then((data) => setProducts(data));
   }, []);
@@ -54,13 +54,13 @@ function Search() {
   };
 
   return (
-    <div>
-      <form onSubmit={(event) => event.preventDefault()}>
+    <div style={{ display: "flex", flexWrap: "wrap" ,margin: "30px"}}>
+      <form style={{ margin: "30px 250px" }} onSubmit={(event) => event.preventDefault()}>
         <Input
           placeholder="Search Products Here"
           allowClear
           style={{
-            width: 300,
+            width: 500,
           }}
           size="large"
           value={searchTerm}
@@ -69,13 +69,13 @@ function Search() {
         <Button type="primary" htmlType="submit"  size="large">
           Search Product 
         </Button>
-        <Button onClick={() => setSearchTerm("")}  size="large">Clear</Button>
-        <div style={{ margin: "16px 0" }}>
-          <Select defaultValue="price" onChange={handleSortChange}>
+        <Button onClick={() => setSearchTerm("")}  size="large">Clear Search</Button>
+        <div style={{ margin: "6px" }}>
+          <Select size="large" defaultValue="price" onChange={handleSortChange}>
             <Select.Option value="price">Compare by Price</Select.Option>
-            <Select.Option value="rating">Comapre by Rating</Select.Option>
+            <Select.Option value="rating">Compare by Rating</Select.Option>
           </Select>
-          <Select defaultValue="ascending" onChange={handleOrderChange}>
+          <Select size="large" defaultValue="ascending" onChange={handleOrderChange}>
             <Select.Option value="ascending">
               Compare by Ascending Order
             </Select.Option>
@@ -85,12 +85,12 @@ function Search() {
           </Select>
         </div>
       </form>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", flexWrap: "wrap" ,margin: "40px" }}>
         {currentProducts.map((product) => (
           <Card
             key={product.id}
             cover={<img src={product.image} alt={product.name} />}
-            style={{ width: 250, margin: "16px" }}
+            style={{ width: 200, margin: "20px" }}
             title={product.shop}
           >
             <Card.Meta
@@ -100,6 +100,8 @@ function Search() {
             {/* <p>Price: {product.price}</p>
           <p>Rating: {product.rating}</p> */}
           </Card>
+
+          
         ))}
       </div>
        <Pagination
