@@ -11,12 +11,3 @@ footer{
     
 }
 
-.copyright {
-    display: flex;
-    align-items: center;
-    color: white;
-    width: 300px;
-    flex: 0.3;
-    font-size: 12px;
-    font-weight: bolder 2px;
-  } 
