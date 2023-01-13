@@ -62,7 +62,7 @@ key: "price",
 ];
 
 return (
-<div>
+<div style={{ margin: "30px"}}>
 <Input
      placeholder="Search Your History"
      value={searchValue}

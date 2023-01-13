@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./Components/Navbar";
-import Contact from "./Components/Contact";
+import ContactUs from "./Components/ContactUs";
 import Home from "./Components/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
@@ -20,7 +20,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contactus" element={<ContactUs />} />
         <Route path="/searchhistory" element={<SearchHistory />} />
         <Route path="/search" element={<Search />} />
         <Route path="/register" element={<Register />} />

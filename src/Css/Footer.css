@@ -1,6 +1,6 @@
 footer{
     background-color:#3949AB;
-    position: fixed;
+    /* position: fixed; */
     display: flex;
     justify-content: center;
     bottom: 1px;
