@@ -7,6 +7,9 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Footer from "./Components/Footer";
 import Search from "./Components/Search";
 import SearchHistory from "./Components/SearchHistory";
+import Login from "./Components/Login";
+import Register from "./Components/Register";
+
 
 
 
@@ -20,8 +23,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/searchhistory" element={<SearchHistory />} />
         <Route path="/search" element={<Search />} />
-        {/* <Route path="/history" element={<SearchHistory />} /> */}
-        {/* <Route path="/login" component={Login} /> */}
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+  
       </Routes>
     </Router>
     <Footer/>
