@@ -52,7 +52,7 @@ function Navbar() {
             <Link to="/" className={classes.link}>
               Home
             </Link>
-            <Link to="/contact" className={classes.link}>
+            <Link to="/contactus" className={classes.link}>
               Contact Us
             </Link>
             <Link to="/searchHistory" className={classes.link}>

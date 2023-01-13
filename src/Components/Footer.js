@@ -1,16 +1,25 @@
-import React from "react";
 import "../Css/Footer.css";
+import { Container, Row, Col } from 'react-bootstrap';
+import React from "react";
 
-const Footer = () => {
+function Footer() {
   return (
-    <div className="copyright">
-    <footer class="bg-light fixed-bottom">
-  <div class="container py-3">
-    <p class="text-center text-muted">Copyright © My Website</p>
-  </div>
-</footer>
-    </div>
+    <footer className='footer'>
+      <Container>
+        <Row>
+          <Col xs={12} md={6}>
+            
+          </Col>
+          <Col xs={12} md={6}>
+            <p className="text-right">
+            <h6>Copyright © Onshop 2023</h6>
+            </p>
+          </Col>
+        </Row>
+      </Container>
+    </footer>
   );
-};
+}
 
 export default Footer;
+
