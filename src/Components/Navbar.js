@@ -55,12 +55,12 @@ function Navbar() {
             <Link to="/contactus" className={classes.link}>
               Contact Us
             </Link>
-            <Link to="/searchHistory" className={classes.link}>
+            <Link to="/login" className={classes.link}>
               Search History
             </Link>
-            <Link to="/login" className={classes.link}>
+            {/* <Link to="/login" className={classes.link}>
               <Button>Login</Button>
-            </Link>
+            </Link> */}
             <Link to="/login" className={classes.link}>
               <Button>Log Out</Button>
             </Link>
