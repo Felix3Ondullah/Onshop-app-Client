@@ -1,4 +1,4 @@
-import React from "react";
+import {useState} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Container,
@@ -27,14 +27,44 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function ContactUs() {
+function Register(onLogin) {
   const classes = useStyles();
 
   //navigate to search history after login
+  // const navigate = useNavigate();
+  // const navigateToLogin = () => {
+  //   navigate("/login");
+  // };
   const navigate = useNavigate();
-  const navigateToLogin = () => {
-    navigate("/login");
-  };
+  const [username, setUserName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [passwordConfirmation, setPasswordConfirmation] = useState("");
+
+  function handleClick(e) {
+    e.preventDefault();
+    fetch("http://localhost:4000/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username,
+        email,
+        password,
+        password_confirmation: passwordConfirmation,
+      }),
+    })
+    .then((r) => {
+      if (r.ok) {
+        r.json().then((user) => onLogin(user));
+        navigate('/login')
+      } else {
+          alert("Invalid Username or Password!")
+          
+          navigate('/register')
+    }})
+  }
 
   return (
     <div className={classes.contactUs}>
@@ -49,8 +79,9 @@ function ContactUs() {
                 <TextField
                   fullWidth
                   margin="normal"
-                  label="Username"
+                  label="Name"
                   variant="outlined"
+                  value={username} onChange={e => setUserName(e.target.value)}
 
                 />
                 <TextField
@@ -58,22 +89,25 @@ function ContactUs() {
                   margin="normal"
                   label="Email"
                   variant="outlined"
+                  value={email} onChange={e => setEmail(e.target.value)}
                 />
                  <TextField
                   fullWidth
                   margin="normal"
                   label="Password"
                   variant="outlined"
+                  value={password} onChange={e => setPassword(e.target.value)}
                 />
                    <TextField
                   fullWidth
                   margin="normal"
                   label="Confirm Password"
                   variant="outlined"
+                  value={passwordConfirmation} onChange={e => setPasswordConfirmation(e.target.value)}
                 />
 
                 <Button 
-                   onClick={navigateToLogin} variant="contained" color="primary" fullWidth>
+                   onClick={handleClick} variant="contained" color="primary" fullWidth>
                   SIGN UP
                 </Button>
               </form>
@@ -85,4 +119,4 @@ function ContactUs() {
   );
 }
 
-export default ContactUs;
+export default Register;
