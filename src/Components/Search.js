@@ -52,6 +52,7 @@ function Search() {
   const handleOrderChange = (value) => {
     setSortOrder(value);
   };
+  
 
   return (
     <div style={{ display: "flex", flexWrap: "wrap" ,margin: "30px"}}>
