@@ -65,6 +65,12 @@ function ContactUs() {
                   label="Password"
                   variant="outlined"
                 />
+                   <TextField
+                  fullWidth
+                  margin="normal"
+                  label="Confirm Password"
+                  variant="outlined"
+                />
 
                 <Button 
                    onClick={navigateToLogin} variant="contained" color="primary" fullWidth>
