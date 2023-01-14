@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Container,
@@ -30,12 +30,33 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Login() {
-  //navigate to search history after login
-  const navigate = useNavigate();
-  const navigateToSearchHistory = () => {
-    navigate("/searchhistory");
-  };
+function Login(onLogin)  {
+  const [username, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+  // const [errors, setErrors] = useState([]);
+  // const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate()
+  function handleClick(e) {
+    e.preventDefault();
+    // setIsLoading(true);
+    fetch("http://localhost:4000/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((user) => onLogin(user));
+        navigate('/searchhistory')
+        alert("Login was Successful!")
+        
+      } else {
+          alert("Invalid Username or Password!")
+          
+          navigate('/login')
+    }})
+  }
   const classes = useStyles();
 
   return (
@@ -53,16 +74,20 @@ function Login() {
                   margin="normal"
                   label="Username"
                   variant="outlined"
+                  value={username}
+                  onChange={(e) => setUserName(e.target.value)}
                 />
                 <TextField
                   fullWidth
                   margin="normal"
                   label="Password"
                   variant="outlined"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
 
                 <Button
-                  onClick={navigateToSearchHistory}
+                  onClick={handleClick}
                   variant="contained"
                   color="primary"
                   fullWidth
