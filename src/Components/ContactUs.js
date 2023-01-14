@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Container, Grid, Typography, TextField, Button } from '@material-ui/core';
-import backgroundImage from '../Assets/cart3.jpg';
+import backgroundImage from '../Assets/shopping2.jpg';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -16,7 +16,9 @@ const useStyles = makeStyles((theme) => ({
   formContainer: {
     backgroundColor: 'rgba(255, 255, 255, 0.8)',
     padding: theme.spacing(2),
-    borderRadius: theme.shape.borderRadius
+    borderRadius: theme.shape.borderRadius,
+    width: '95vh',
+    margin: 'auto'
   }
 }));
 
@@ -24,9 +26,9 @@ function ContactUs() {
   const classes = useStyles();
 
   return (
-    <div className={classes.contactUs}>
-      <Container sx={{ width: 1 }}>
-        <Grid container justify="center" alignItems="center">
+    <div  className={classes.contactUs}>
+      <Container  >
+        <Grid  container justify="center" alignItems="center">
           <Grid item xs={12} sm={8} md={6} lg={4}>
             <div className={classes.formContainer}>
               <Typography variant="h5" gutterBottom align="center">
