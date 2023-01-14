@@ -1,4 +1,4 @@
-import React from "react";
+import {useState} from "react";
 import { Button } from "react-bootstrap";
 import {
   AppBar,
@@ -9,8 +9,9 @@ import {
   useTheme,
   useMediaQuery,
 } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import DrawerComponent from "./Drawer";
+import { Snackbar } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   navlinks: {
@@ -38,6 +39,23 @@ function Navbar() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    setOpen(true);
+    setTimeout(() => {
+      navigate('/login');
+    }, 2000);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+  };
+
   return (
     <AppBar position="static">
       <CssBaseline />
@@ -55,12 +73,18 @@ function Navbar() {
             <Link to="/contactus" className={classes.link}>
               Contact Us
             </Link>
-            <Link to="/searchHistory" className={classes.link}>
+            <Link   onClick={handleClick}  className={classes.link}>
               Search History
+              <Snackbar
+        open={open}
+        onClose={handleClose}
+        message="Kindly Login to view your history...."
+        autoHideDuration={2000}
+      />
             </Link>
-            <Link to="/login" className={classes.link}>
+            {/* <Link to="/login" className={classes.link}>
               <Button>Login</Button>
-            </Link>
+            </Link> */}
             <Link to="/login" className={classes.link}>
               <Button>Log Out</Button>
             </Link>

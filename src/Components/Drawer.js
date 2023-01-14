@@ -38,13 +38,7 @@ function DrawerComponent() {
             </ListItemText>
           </ListItem>
           <Divider />
-          <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-              <Link to="/about" className={classes.link}>
-                About
-              </Link>
-            </ListItemText>
-          </ListItem>
+  
           <Divider />
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
@@ -53,7 +47,6 @@ function DrawerComponent() {
               </Link>
             </ListItemText>
           </ListItem>
-          <Divider />
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
               <Link to="/searchhistory" className={classes.link}>
@@ -61,13 +54,9 @@ function DrawerComponent() {
               </Link>
             </ListItemText>
           </ListItem>
-          <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-              <Link to="/login" className={classes.link}>
-                Login
-              </Link>
-            </ListItemText>
-          </ListItem>
+          <Divider />
+         
+  
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
               <Link to="/log out" className={classes.link}>
