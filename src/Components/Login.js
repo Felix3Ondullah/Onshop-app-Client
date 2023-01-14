@@ -51,13 +51,13 @@ function Login() {
                 <TextField
                   fullWidth
                   margin="normal"
-                  label="Name"
+                  label="Username"
                   variant="outlined"
                 />
                 <TextField
                   fullWidth
                   margin="normal"
-                  label="Email"
+                  label="Password"
                   variant="outlined"
                 />
 

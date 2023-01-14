@@ -49,7 +49,7 @@ function ContactUs() {
                 <TextField
                   fullWidth
                   margin="normal"
-                  label="Name"
+                  label="Username"
                   variant="outlined"
 
                 />
@@ -57,6 +57,12 @@ function ContactUs() {
                   fullWidth
                   margin="normal"
                   label="Email"
+                  variant="outlined"
+                />
+                 <TextField
+                  fullWidth
+                  margin="normal"
+                  label="Password"
                   variant="outlined"
                 />
 
