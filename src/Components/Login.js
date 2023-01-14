@@ -11,8 +11,6 @@ import backgroundImage from "../Assets/signin2.jpg";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-
-
 const useStyles = makeStyles((theme) => ({
   contactUs: {
     backgroundImage: `url(${backgroundImage})`,
@@ -28,27 +26,26 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: theme.shape.borderRadius,
   },
   container: {
-    justifyContent: 'flex-end',
+    justifyContent: "flex-end",
   },
 }));
 
 function Login() {
-
   //navigate to search history after login
-const navigate = useNavigate();
-const navigateToSearchHistory = () => {
-  navigate("/searchhistory");
-};
+  const navigate = useNavigate();
+  const navigateToSearchHistory = () => {
+    navigate("/searchhistory");
+  };
   const classes = useStyles();
 
   return (
     <div className={classes.contactUs}>
       <Container>
-        <Grid container  alignItems="center">
+        <Grid container alignItems="center">
           <Grid item xs={12} sm={8} md={6} lg={4}>
             <div className={classes.formContainer}>
               <Typography variant="h5" gutterBottom align="center">
-                LOG IN 
+                LOG IN
               </Typography>
               <form>
                 <TextField
@@ -64,7 +61,12 @@ const navigateToSearchHistory = () => {
                   variant="outlined"
                 />
 
-                <Button   onClick={navigateToSearchHistory} variant="contained" color="primary" fullWidth>
+                <Button
+                  onClick={navigateToSearchHistory}
+                  variant="contained"
+                  color="primary"
+                  fullWidth
+                >
                   Login
                 </Button>
               </form>
