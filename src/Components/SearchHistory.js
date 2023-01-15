@@ -62,7 +62,8 @@ key: "price",
 ];
 
 return (
-<div style={{ margin: "30px"}}>
+  <div className="mainsection">
+<div style={{ marginTop: -300 , width: "95%"}}>
 <Input
      placeholder="Search Your History"
      value={searchValue}
@@ -80,6 +81,7 @@ onChange={handlePageChange}
 showSizeChanger
 onShowSizeChange={handlePageSizeChange}
 />
+</div>
 </div>
 );
 };
