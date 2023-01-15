@@ -78,7 +78,7 @@ function Navbar() {
               <Snackbar
         open={open}
         onClose={handleClose}
-        message="Kindly Login to view your history...."
+        message="Redirecting...."
         autoHideDuration={2000}
       />
             </Link>
