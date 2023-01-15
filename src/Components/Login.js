@@ -7,7 +7,7 @@ import {
   TextField,
   Button,
 } from "@material-ui/core";
-import backgroundImage from "../Assets/signin2.jpg";
+import backgroundImage from "../Assets/bg1.jpg";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
@@ -83,6 +83,7 @@ function Login(onLogin)  {
                   label="Password"
                   variant="outlined"
                   value={password}
+                  type="password"
                   onChange={(e) => setPassword(e.target.value)}
                 />
 
