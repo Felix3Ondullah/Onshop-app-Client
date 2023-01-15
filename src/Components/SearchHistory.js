@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Table, Input, Pagination } from "antd";
+import "../Css/SearchHistory.css";
 
 const SearchHistory = () => {
 const [searchHistory, setSearchHistory] = useState([]);
@@ -62,6 +63,8 @@ key: "price",
 ];
 
 return (
+  <div className="mainsection">
+
 <div style={{ margin: "30px"}}>
 <Input
      placeholder="Search Your History"
@@ -80,6 +83,7 @@ onChange={handlePageChange}
 showSizeChanger
 onShowSizeChange={handlePageSizeChange}
 />
+</div>
 </div>
 );
 };

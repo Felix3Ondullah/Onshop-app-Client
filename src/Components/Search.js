@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Card, Input, Button, Pagination, Select } from "antd";
+import "../Css/Search.css";
 
 function Search() {
   const [products, setProducts] = useState([]);
@@ -7,7 +8,7 @@ function Search() {
   const [sortBy, setSortBy] = useState("price");
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [productsPerPage] = useState(10);
+  const [productsPerPage] = useState(5);
   const [sortOrder, setSortOrder] = useState("ascending");
 
   useEffect(() => {
@@ -55,7 +56,8 @@ function Search() {
   
 
   return (
-    <div style={{ display: "flex", flexWrap: "wrap" ,margin: "30px"}}>
+    <div className="mainsection">
+    <div  style={{ display: "flex", flexWrap: "wrap" ,margin: "30px"}}>
       <form style={{ margin: "30px 250px" }} onSubmit={(event) => event.preventDefault()}>
         <Input
           placeholder="Search Products Here"
@@ -113,7 +115,9 @@ function Search() {
         style={{ margin: "20px 0" }}
       
       />
+
     </div>
+     </div>
   );
 }
 
