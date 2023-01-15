@@ -82,6 +82,7 @@ function Login(onLogin)  {
                   margin="normal"
                   label="Password"
                   variant="outlined"
+                  type ="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />

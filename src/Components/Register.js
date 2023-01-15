@@ -96,12 +96,14 @@ function Register(onLogin) {
                   margin="normal"
                   label="Password"
                   variant="outlined"
+                  type ="password"
                   value={password} onChange={e => setPassword(e.target.value)}
                 />
                    <TextField
                   fullWidth
                   margin="normal"
                   label="Confirm Password"
+                  type ="password"
                   variant="outlined"
                   value={passwordConfirmation} onChange={e => setPasswordConfirmation(e.target.value)}
                 />
