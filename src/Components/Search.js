@@ -55,6 +55,7 @@ function Search() {
   
 
   return (
+    <div className="mainsection">
     <div style={{ display: "flex", flexWrap: "wrap" ,margin: "30px"}}>
       <form style={{ margin: "30px 250px" }} onSubmit={(event) => event.preventDefault()}>
         <Input
@@ -113,6 +114,7 @@ function Search() {
         style={{ margin: "20px 0" }}
       
       />
+    </div>
     </div>
   );
 }
