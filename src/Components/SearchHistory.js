@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Table, Input, Pagination } from "antd";
+import "../Css/SearchHistory.css";
 
 const SearchHistory = () => {
 const [searchHistory, setSearchHistory] = useState([]);
