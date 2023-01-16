@@ -7,7 +7,7 @@ import {
   TextField,
   Button,
 } from "@material-ui/core";
-import backgroundImage from "../Assets/signin2.jpg";
+import backgroundImage from "../Assets/back1.jpg";
 import { useNavigate } from "react-router-dom";
 
 
@@ -68,8 +68,8 @@ function Register(onLogin) {
 
   return (
     <div className={classes.contactUs}>
-      <Container>
-        <Grid container="center" alignItems="center">
+      <Container style={{ marginTop: -100 , width: "95%"}}>
+        <Grid container justify="center" alignItems="center">
           <Grid item xs={12} sm={8} md={6} lg={4}>
             <div className={classes.formContainer}>
               <Typography variant="h5" gutterBottom align="center">
@@ -95,6 +95,7 @@ function Register(onLogin) {
                   fullWidth
                   margin="normal"
                   label="Password"
+                  type = "password"
                   variant="outlined"
                   value={password} onChange={e => setPassword(e.target.value)}
                 />
@@ -102,6 +103,7 @@ function Register(onLogin) {
                   fullWidth
                   margin="normal"
                   label="Confirm Password"
+                  type = "password"
                   variant="outlined"
                   value={passwordConfirmation} onChange={e => setPasswordConfirmation(e.target.value)}
                 />

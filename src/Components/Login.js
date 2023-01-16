@@ -7,7 +7,7 @@ import {
   TextField,
   Button,
 } from "@material-ui/core";
-import backgroundImage from "../Assets/signin2.jpg";
+import backgroundImage from "../Assets/back1.jpg";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
@@ -61,8 +61,8 @@ function Login(onLogin)  {
 
   return (
     <div className={classes.contactUs}>
-      <Container>
-        <Grid container alignItems="center">
+      <Container style={{ marginTop: -200 , width:"100%"}}>
+        <Grid container justify="center" alignItems="center" >
           <Grid item xs={12} sm={8} md={6} lg={4}>
             <div className={classes.formContainer}>
               <Typography variant="h5" gutterBottom align="center">
@@ -82,6 +82,7 @@ function Login(onLogin)  {
                   margin="normal"
                   label="Password"
                   variant="outlined"
+                  type = "password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
