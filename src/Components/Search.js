@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Card, Input, Button, Pagination, Select } from "antd";
+import "../Css/Search.css";
 
 function Search() {
   const [products, setProducts] = useState([]);
@@ -92,7 +93,7 @@ function Search() {
           <Card
             key={product.id}
             cover={<img src={product.image} alt={product.name} />}
-            style={{ width: 200, margin: "20px" }}
+            style={{ width: 300, margin: "20px" }}
             title={product.shop}
           >
             <Card.Meta

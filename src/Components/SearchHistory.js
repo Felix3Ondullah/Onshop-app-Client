@@ -63,7 +63,7 @@ key: "price",
 
 return (
   <div className="mainsection">
-<div style={{ marginTop: -300 , width: "95%"}}>
+<div style={{ marginTop: -90 , width: "95%"}}>
 <Input
      placeholder="Search Your History"
      value={searchValue}
