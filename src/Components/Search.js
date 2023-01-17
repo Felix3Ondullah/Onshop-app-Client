@@ -10,6 +10,7 @@ function Search() {
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(10);
   const [sortOrder, setSortOrder] = useState("ascending");
+  
 
   useEffect(() => {
     fetch("http://localhost:3007/products")
@@ -33,7 +34,7 @@ function Search() {
       filteredData.sort((a, b) => (a.descending > b.descending ? 1 : -1));
     } 
     setFilteredProducts(filteredData);
-  }, [searchTerm, sortBy,sortOrder, products]);
+  }, [searchTerm, sortBy,sortOrder, products,]);
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -91,9 +92,10 @@ function Search() {
       <div style={{ display: "flex", flexWrap: "wrap" ,margin: "40px" }}>
         {currentProducts.map((product) => (
           <Card
+          onClick={() => setProducts(!products)}
             key={product.id}
             cover={<img src={product.image} alt={product.name} />}
-            style={{ width: 300, margin: "20px" }}
+            style={{ width: 200, margin: "20px" }}
             title={product.shop}
           >
             <Card.Meta
