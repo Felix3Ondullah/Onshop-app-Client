@@ -10,10 +10,9 @@ function Search() {
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(10);
   const [sortOrder, setSortOrder] = useState("ascending");
-  
 
   useEffect(() => {
-    fetch("http://localhost:3007/products")
+    fetch("http://localhost:3008/products")
       .then((response) => response.json())
       .then((data) => setProducts(data));
   }, []);
@@ -27,6 +26,9 @@ function Search() {
     }  else if (sortBy === "rating") {
       filteredData.sort((a, b) => (a.rating > b.rating ? 1 : -1));
     }
+    else if (sortBy === "discount") {
+      filteredData.sort((a, b) => (a.discount > b.discount ? 1 : -1));
+    }
 
     if (sortOrder === "ascending") {
       filteredData.sort((a, b) => (a.ascending > b.ascending? 1 : -1));
@@ -34,7 +36,7 @@ function Search() {
       filteredData.sort((a, b) => (a.descending > b.descending ? 1 : -1));
     } 
     setFilteredProducts(filteredData);
-  }, [searchTerm, sortBy,sortOrder, products,]);
+  }, [searchTerm, sortBy,sortOrder, products]);
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -78,6 +80,7 @@ function Search() {
           <Select size="large" defaultValue="price" onChange={handleSortChange}>
             <Select.Option value="price">Compare by Price</Select.Option>
             <Select.Option value="rating">Compare by Rating</Select.Option>
+            <Select.Option value="discount">Compare by Discount</Select.Option>
           </Select>
           <Select size="large" defaultValue="ascending" onChange={handleOrderChange}>
             <Select.Option value="ascending">
@@ -92,7 +95,6 @@ function Search() {
       <div style={{ display: "flex", flexWrap: "wrap" ,margin: "40px" }}>
         {currentProducts.map((product) => (
           <Card
-          onClick={() => setProducts(!products)}
             key={product.id}
             cover={<img src={product.image} alt={product.name} />}
             style={{ width: 200, margin: "20px" }}
@@ -100,7 +102,7 @@ function Search() {
           >
             <Card.Meta
               title={product.name}
-              description={`Price: ${product.price} | Rating: ${product.rating}`}
+              description={`Price: ${product.price} | Rating: ${product.rating} | Discount: ${product.discount}  `}
             />
             {/* <p>Price: {product.price}</p>
           <p>Rating: {product.rating}</p> */}

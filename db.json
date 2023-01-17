@@ -6,7 +6,8 @@
       "image": "https://m.xcite.com/media/catalog/product/cache/1/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/d/e/dell_g15_5515_amd_rayzen_7_16gb_ram_512gb_ssd_15.6-inch_gaming_laptop_1.jpg",
       "name": "Gaming Laptop",
       "price": 20,
-      "rating": 4
+      "rating": 4,
+      "discount": 150
   },
   {
       "id": 2,
@@ -14,7 +15,8 @@
       "image": "https://m.xcite.com/media/catalog/product/cache/1/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/i/m/image_template_2_-_2020-11-23t113708.928.jpg",
       "name": "Macbook M1 Air",
       "price": 45,
-      "rating": 4
+      "rating": 4,
+      "discount": 68
   },
   {
       "id": 3,
@@ -22,7 +24,8 @@
       "image": "https://m.xcite.com/media/catalog/product/cache/1/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/p/s/ps5_b2.jpg",
       "name": "PlayStation 5 Console",
       "price": 70,
-      "rating": 4
+      "rating": 4,
+      "discount": 130
       
   },
   {
@@ -31,7 +34,9 @@
     "image": "https://m.xcite.com/media/catalog/product/cache/1/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/d/e/dell_g15_5515_amd_rayzen_7_16gb_ram_512gb_ssd_15.6-inch_gaming_laptop_1.jpg",
     "name": "Gaming Laptop",
     "price": 85,
-    "rating": 4
+    "rating": 4,
+    "discount": 160
+
 },
 {	   
     "id": 5,
@@ -39,7 +44,8 @@
     "image": "https://m.xcite.com/media/catalog/product/cache/1/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/i/m/image_template_2_-_2020-11-23t113708.928.jpg",
     "name": "Macbook M1 Air",
     "price": 40,
-    "rating": 4
+    "rating": 4,
+    "discount": 100
 },
 {
     "id": 6,
@@ -47,7 +53,8 @@
     "image": "https://m.xcite.com/media/catalog/product/cache/1/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/p/s/ps5_b2.jpg",
     "name": "PlayStation 5 Console",
     "price": 10,
-    "rating": 4
+    "rating": 4,
+    "discount": 10
     
 },
 {
@@ -56,7 +63,8 @@
   "image": "https://m.xcite.com/media/catalog/product/cache/1/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/p/s/ps5_b2.jpg",
   "name": "PlayStation 5 Console",
   "price": 200,
-  "rating": 4
+  "rating": 4,
+  "discount": 30
   
 },
 {
@@ -65,7 +73,8 @@
 "image": "https://m.xcite.com/media/catalog/product/cache/1/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/d/e/dell_g15_5515_amd_rayzen_7_16gb_ram_512gb_ssd_15.6-inch_gaming_laptop_1.jpg",
 "name": "Gaming Laptop",
 "price": 35,
-"rating": 4
+"rating": 4,
+"discount": 35
 },
 {
 "id": 9,
@@ -73,7 +82,8 @@
 "image": "https://m.xcite.com/media/catalog/product/cache/1/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/i/m/image_template_2_-_2020-11-23t113708.928.jpg",
 "name": "Macbook M1 Air",
 "price": 60,
-"rating": 4
+"rating": 4,
+"discount": 70
 },
 {
 "id": 10,
@@ -81,7 +91,8 @@
 "image": "https://m.xcite.com/media/catalog/product/cache/1/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/p/s/ps5_b2.jpg",
 "name": "PlayStation 5 Console",
 "price": 60,
-"rating": 4
+"rating": 4,
+"discount": 110
 
 }
   ]

@@ -14,7 +14,7 @@ fetchSearchHistory();
 
 const fetchSearchHistory = async () => {
 try {
-const response = await fetch("http://localhost:3007/products");
+const response = await fetch("http://localhost:3008/products");
 const data = await response.json();
 setSearchHistory(data);
 } catch (error) {
@@ -59,6 +59,11 @@ key: "price",
   dataIndex: "rating",
   key: "rating",
   },
+  {
+    title: "Discount",
+    dataIndex: "discount",
+    key: "discount",
+    },
 
 ];
 
