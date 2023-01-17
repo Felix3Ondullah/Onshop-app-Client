@@ -1,0 +1,14 @@
+{
+    "products": [
+      {
+     "id": 1,
+     "shop": "Amazon",
+     "name": "Samsung Galaxy",
+     "price": 1700,
+     "image_url" :"https://m.media-amazon.com/images/I/41kvPimzyiL._AC_UY500_.jpg",
+      "link": "https://www.amazon.com/Samsung-SM-A536B-Factory-Unlocked-International/dp/B09SHV78TN/ref=sxin_13_hcs-la-na-prod?content-id=amzn1.sym.9ec56812-1fd1-44dd-a58e-8a98fdb52248%3Aamzn1.sym.9ec56812-1fd1-44dd-a58e-8a98fdb52248&crid=1KSH5767NCC1H&cv_ct_cx=samsung&keywords=samsung&pd_rd_i=B09SHV78TN&pd_rd_r=10c0a8ce-2ed2-4cbd-b003-877f309b108d&pd_rd_w=x56Et&pd_rd_wg=HkPu9&pf_rd_p=9ec56812-1fd1-44dd-a58e-8a98fdb52248&pf_rd_r=FC1KHTT808JPP9HJMZ62&qid=1673974824&sprefix=samsung%2Caps%2C1246&sr=1-2-fea1a664-7436-49c1-b8e0-beb195532fb9",
+     "rating": 4
+   
+    }
+]
+}

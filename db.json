@@ -1,99 +1,686 @@
 {
   "products": [
-    { 
-      "id": 1,
-      "shop": "Shopify",
-      "image": "https://m.xcite.com/media/catalog/product/cache/1/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/d/e/dell_g15_5515_amd_rayzen_7_16gb_ram_512gb_ssd_15.6-inch_gaming_laptop_1.jpg",
-      "name": "Gaming Laptop",
-      "price": 20,
-      "rating": 4,
-      "discount": 150
+    {
+   "id": 1,
+   "shop": "Amazon",
+   "name": "t-shirt",
+   "price": 1700,
+   "image_url" :"https://m.media-amazon.com/images/I/41kvPimzyiL._AC_UY500_.jpg",
+   "link": "https://www.amazon.com/Jockey-Mens-Sportswear-Short-Sleeve/dp/B073J553FV/ref=sr_1_7_sspa?keywords=Fashion+4-in-1+Men%27s+Shirts+Cotton+Short+Sleeve+T-shirt+china&qid=1673448413&refinements=p_36%3A23610969011&rnid=23610935011&s=apparel&sr=1-7-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzT0pIVzM5OUgxVTBTJmVuY3J5cHRlZElkPUExMDE5MzYzMjdNV0c0UThRUElWNCZlbmNyeXB0ZWRBZElkPUEwNzc2MTg3MklIRkZMNDEzS0pCNyZ3aWRnZXROYW1lPXNwX210ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=",
+   "rating": 4
+ 
   },
   {
-      "id": 2,
-      "shop": "Ebay",
-      "image": "https://m.xcite.com/media/catalog/product/cache/1/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/i/m/image_template_2_-_2020-11-23t113708.928.jpg",
-      "name": "Macbook M1 Air",
-      "price": 45,
-      "rating": 4,
-      "discount": 68
+   "id": 2,
+   "shop": "Jumia",
+   "name": "t-shirt",
+   "price": 1790,
+   "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/16/455852/1.jpg?8926",
+    "link": "https://www.jumia.co.ke/4-in-1-mens-shirts-cotton-short-sleeve-t-shirt-fashion-mpg301445.html",
+   "rating": 4
+ 
   },
   {
-      "id": 3,
-      "shop": "Amazon",
-      "image": "https://m.xcite.com/media/catalog/product/cache/1/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/p/s/ps5_b2.jpg",
-      "name": "PlayStation 5 Console",
-      "price": 70,
-      "rating": 4,
-      "discount": 130
-      
+   "id": 3,
+   "shop": "E-bay",
+   "name": "t-shirt",
+   "price": 1797,
+    "image_url" :"https://i.ebayimg.com/images/g/GR8AAOSw6PZhMZWk/s-l500.jpg",
+    "link": "https://www.ebay.com/itm/403096700629?hash=item5dda6f86d5:g:GR8AAOSw6PZhMZWk&amdata=enc%3AAQAHAAAA4K7w1bzM4%2FuMg8mydcioIqIomMFz2oRI8vCJxbUgo8wuHe2pM4j6hC6k8%2F2yUNP1iVyn9giwKAHctNUvzY8vvJdLujhtNT8xsF79qc7X87XsG3P3TseMeQxQNKlBldlPDW77ZRae81mWnkI6LNPySf%2BZtUQ2e9mx0r9EWcrNoifDmB09qeRIZygE1itDT%2FMs%2FXsHgjal%2BslCJsFf8R4lTE5nDmHOHkW1eAW8AiL3QiRTixsNpJ6lPLXUzVds1LijBwGPfKlBd2St7Rr%2BJDPmbYzxUNe20tq7hnMjCxA7Eg8j%7Ctkp%3ABFBMhPS1lbRh",
+   "rating": 4
+ 
   },
   {
-    "id": 4,
-    "shop": "Shopify",
-    "image": "https://m.xcite.com/media/catalog/product/cache/1/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/d/e/dell_g15_5515_amd_rayzen_7_16gb_ram_512gb_ssd_15.6-inch_gaming_laptop_1.jpg",
-    "name": "Gaming Laptop",
-    "price": 85,
-    "rating": 4,
-    "discount": 160
+   "id": 4,
+   "shop": "Alibaba",
+   "name": "t-shirt",
+   "price": 1400,
+   "image_url" :"https://s.alicdn.com/@sc04/kf/Heb92c8f8d27b4455948a32846b603fb51.jpg_960x960.jpg",
+    "link": "https://www.alibaba.com/product-detail/2021-New-Cheap-Custom-Tpu-3d_1600427644683.html?spm=a2700.galleryofferlist.normal_offer.d_image.7f35599fOiW4Jg&s=p",
+   "rating": 4
+ 
+  },
 
-},
-{	   
-    "id": 5,
-    "shop": "Walmart",
-    "image": "https://m.xcite.com/media/catalog/product/cache/1/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/i/m/image_template_2_-_2020-11-23t113708.928.jpg",
-    "name": "Macbook M1 Air",
-    "price": 40,
-    "rating": 4,
-    "discount": 100
-},
-{
-    "id": 6,
-    "shop": "Ebay",
-    "image": "https://m.xcite.com/media/catalog/product/cache/1/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/p/s/ps5_b2.jpg",
-    "name": "PlayStation 5 Console",
-    "price": 10,
-    "rating": 4,
-    "discount": 10
+  {
+   "id": 5,
+   "shop": "Amazon",
+   "name": "Samsung Galaxy",
+   "price": 19200,
+   "image_url" :"https://m.media-amazon.com/images/I/61xhaqnlKPL._AC_SX679_.jpg",
+    "link": "https://www.amazon.com/Samsung-A13-5000mAh-Battery-T-Mobile/dp/B09TZC4LW4",
+   "rating": 3.8
+
+  },
+  {
+   "id": 6,
+   "shop": "Jumia",
+   "name": "Samsung Galaxy",
+   "price": 20499,
+   "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/86/782736/1.jpg?3156",
+    "link": "https://www.jumia.co.ke/samsung-galaxy-a13-6.6-64gb-4gb-ram-dual-sim-5000mah-black-63728768.html",
+   "rating": 4.5
+
+  },
+  {
+   "id": 7,
+   "shop": "Ebay",
+   "name": "Samsung Galaxy",
+   "price": 24300,
+   "image_url" :"https://i.ebayimg.com/images/g/HBkAAOSwUtZiQU2Y/s-l500.jpg",
+    "link": "https://www.ebay.com/itm/224908533492",
+   "rating": 4
+
+  },
+
+    {
+     "id": 8,
+     "shop": "Kilimall",
+     "name": "Power Bank",
+     "price": 2500,
+     "image_url" :"https://image.kilimall.com/kenya/shop/store/goods/8661/2022/12/16712267641914d7cf1cce6e642c9bef569e5b4e1cadd_720.jpg.webp",
+      "link": "https://www.kilimall.co.ke/new/goods/18611388?gclid=EAIaIQobChMIg4i70-rB_AIVrPjVCh0WfgZqEAYYBCABEgJrPPD_BwE",
+     "rating": 5.0
     
-},
-{
-  "id": 7,
-  "shop": "Amazon",
-  "image": "https://m.xcite.com/media/catalog/product/cache/1/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/p/s/ps5_b2.jpg",
-  "name": "PlayStation 5 Console",
-  "price": 200,
-  "rating": 4,
-  "discount": 30
-  
-},
-{
-"id": 8,
-"shop": "Ebay",
-"image": "https://m.xcite.com/media/catalog/product/cache/1/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/d/e/dell_g15_5515_amd_rayzen_7_16gb_ram_512gb_ssd_15.6-inch_gaming_laptop_1.jpg",
-"name": "Gaming Laptop",
-"price": 35,
-"rating": 4,
-"discount": 35
-},
-{
-"id": 9,
-"shop": "Walmart",
-"image": "https://m.xcite.com/media/catalog/product/cache/1/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/i/m/image_template_2_-_2020-11-23t113708.928.jpg",
-"name": "Macbook M1 Air",
-"price": 60,
-"rating": 4,
-"discount": 70
-},
-{
-"id": 10,
-"shop": "Shopify",
-"image": "https://m.xcite.com/media/catalog/product/cache/1/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/p/s/ps5_b2.jpg",
-"name": "PlayStation 5 Console",
-"price": 60,
-"rating": 4,
-"discount": 110
+    },
 
-}
+
+  {
+   "id": 9,
+   "shop": "Jumia",
+   "name": "Power Bank",
+   "price": 2500,
+   "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/82/907976/1.jpg?8336",
+    "link": "https://www.jumia.co.ke/pohb-power-banks-numeric-display-30000mah-67970928.html?seller_product=1",
+   "rating": 5.0
+  
+  },
+  {
+   "id": 10,
+   "shop": "Amazon",
+   "name": "Power Bank",
+   "price": 3000,
+   "image_url" :"https://m.media-amazon.com/images/I/51E6rE0GbtL._AC_SX679_.jpg",
+    "link": "https://www.amazon.com/30000mAh-Portable-Charger-External-Compatible/dp/B09TPFGXMS?th=1",
+   "rating": 4.4
+  
+  },
+
+
+  {
+   "id": 11,
+   "shop": "Mojakart",
+   "name": "Apple MacBook",
+   "price": 120000,
+   "image_url" :"https://www.mojakart.co.ke/wp-content/uploads/2022/11/1-4.png",
+    "link": "https://www.mojakart.co.ke/product/apple-macbook-air-m1-chip-mgn63b-8gb-ram-256gb-ssd-13/?gclid=EAIaIQobChMIpNfwsezB_AIVF9d3Ch03dAfFEAQYASABEgIb4PD_BwE",
+   "rating": 4.5
+
+  },
+  {
+   "id": 12,
+   "shop": "Jumia",
+   "name": "Apple MacBook",
+   "price": 133000,
+   "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/75/7233011/1.jpg?7470",
+    "link": "https://www.jumia.co.ke/apple-macbook-air-laptop-apple-m1-chip-13-retina-display-8gb-ram-256gb-ssd-gold-110332757.html",
+   "rating": 5.0
+
+  },
+  {
+   "id": 13,
+   "shop": "Ebay",
+   "name": "Apple MacBook",
+   "price": 134000,
+      "image_url" :"https://i.ebayimg.com/images/g/i2sAAOSw9oJjp682/s-l640.jpg",
+    "link": "https://www.ebay.com/b/2020-Apple-MacBook-Air/111422/bn_7116676158",
+   "rating": 5.0
+
+  },
+
+  {
+   "id": 14,
+   "shop": "Amazon",
+   "name": "Shirts",
+   "price": 2000,
+   "image_url" :"https://images-na.ssl-images-amazon.com/images/I/51rkKPruYvL._AC_UL600_SR600,400_.jpg",
+    "link": "https://www.amazon.com/Best-Sellers-Men's-Dress-Shirts/zgbs/fashion/1045626",
+   "rating": 4.7
+  
+  },
+  {
+   "id": 15,
+   "shop": "Jumia",
+   "name": "Shirts",
+   "price": 650,
+   "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/47/065783/1.jpg?7888",
+    "link": "https://www.jumia.co.ke/fashion-mens-long-sleeve-dress-shirts-38756074.html",
+   "rating": 4.0
+  
+  },
+  {
+   "id": 16,
+   "shop": "Kilimall",
+   "name": "Shirts",
+   "price": 1300,
+    "image_url" :"https://image.kilimall.com/kenya/shop/store/goods/7629/2022/10/16660315369000004e1d3d56149d384c75aad0dfa280f_720.jpg.webp",
+    "link": "https://www.kilimall.co.ke/new/goods/18417050?gclid=EAIaIQobChMIk76U9-7B_AIVyrvVCh3g-wkJEAYYAiABEgIJbvD_BwE",
+   "rating": 4.5
+  
+  },
+
+      {
+       "id": 17,
+       "shop": "Jumia",
+       "name": "Nivea",
+       "price": 1312,
+       "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/082586/1.jpg?3467",
+        "link": "https://www.jumia.co.ke/nivea-men-cool-kick-shower-gel-for-men-500ml-pack-of-2-68528022.html",
+       "rating": 4.9
+      
+      },
+      {
+       "id": 18,
+       "shop": "Amazon",
+       "name": "Nivea",
+       "price":1710,
+       "image_url" :"https://m.media-amazon.com/images/I/71PfAMdfEcL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com/nivea-men/s?k=nivea+men",
+       "rating": 4.8
+      
+      },
+    
+
+    {
+       "id": 19,
+       "shop": "Amazon",
+       "name": "Laptop Stand",
+       "price": 1920,
+       "image_url" :"https://m.media-amazon.com/images/I/71kksNPWZfL._AC_SY450_.jpg",
+        "link": "https://www.amazon.com/Adjustable-Ergonomic-Portable-Anti-Slip-Compatible/dp/B08JS9PJD7/ref=sr_1_1_sspa?keywords=laptop%2Bstand&qid=1673522143&s=pc&sr=1-1-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzM1ZVSEhGWTVIUThLJmVuY3J5cHRlZElkPUEwOTgzMDc3MzFSSEg0NTRTRFhIUSZlbmNyeXB0ZWRBZElkPUEwMzk0MjI3V0w1WjczUDVVTjVXJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ&th=1",
+       "rating": 4.9
+     
+      },
+      {
+       "id": 20,
+       "shop": "Jumia",
+       "name": "Laptop Stand",
+       "price": 829,
+       "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/57/965916/1.jpg?6808",
+        "link": "https://www.jumia.co.ke/qwen-aluminum-alloy-laptop-stand-computer-stand-61956975.html",
+       "rating": 4.9
+     
+      },
+      {
+       "id": 21,
+       "shop": "KiliMall",
+       "name": "Laptop Stand",
+       "price": 499,
+       "image_url" :"https://image.kilimall.com/kenya/shop/store/goods/1213/2022/10/166537470452540631e81d9534a43bdc149eae344ee34_720.jpg.webp",
+        "link": "https://www.kilimall.co.ke/new/goods/18387044-New-Arrival-Foldable-Aluminium-AlloyABS-Plastic-Laptop-Stand-Portable-Notebook-Support-Base-Holder-Adjustable-Riser-Cooling-Bracket-for-Laptop--Tablet-Accessories-Black",
+       "rating": 4.4
+     
+      },
+    
+
+    {
+       "id": 22,
+       "shop": "Alibaba",
+       "name": "Wrist Watch",
+       "price": 530,
+        "image_url" :"https://s.alicdn.com/@sc04/kf/H7049fd99683049d99a1ec40f533584cfb.jpg_960x960.jpg",
+        "link": "https://www.alibaba.com/suppliersubdomainalibabacom/product-detail/Geneva-LED-Backlight-Glow-Quartz-Watch_1600321563772.html",
+       "rating": 4.3
+       
+      },
+      {
+       "id": 23,
+       "shop": "Jumia",
+       "name": "Wrist Watch",
+       "price": 490,
+       "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/73/810374/1.jpg?2588",
+        "link": "https://www.jumia.co.ke/geneva-men-watches-quartz-wrist-watch-led-backlight-47301837.html",
+       "rating": 4.0
+       
+      },
+      {
+       "id": 24,
+       "shop": "Ebay",
+       "name": "Wrist Watch",
+       "price": 1500,
+       "image_url" :"https://i.ebayimg.com/images/g/bx4AAOSwVH1fbQNi/s-l1600.png",
+        "link": "https://www.ebay.com/itm/154102304092?hash=item23e1368d5c:g:Ns0AAOSwGY5fbQLH&amdata=enc%3AAQAHAAAA0MRTNH9bSQEbNhykb19i6OOyQzmNr%2B0EtWcZ3B943AKS%2FESW4NaqSnXXC1C4NSOD1RXjQ%2BX%2BW%2FY%2ByI64GwdeJQK5Yt59q4G7A18vcH81D%2FOjvS6g%2FUkAeUGAxmvgGNamswPy9dUitmMCVMEVMTCzKnT2fDUDbq4U%2B0ZkvgV70h%2Fhl508A0gaF8TYTx3YE7GwOxYRhqmW6BMINolFpHOE4szup%2BUzICqNlP1lShZ694sp4SgeQ4%2F4UWTwuASlJ2Uk%2Bb1xEgC0PgU1k0onEbmF12o%3D%7Ctkp%3ABFBMsvS527Rh&var=454240064334",
+       "rating": 4.5
+       
+      },
+    
+    {
+       "id": 25,
+       "shop": "Amazon",
+       "name": "Make Up Cosmetics",
+       "price": 1000,
+       "image_url" :"https://m.media-amazon.com/images/I/61xltyg8i9L._SY355_.jpg",
+        "link": "https://www.amazon.com/CHANGEABLE-Eyeshadow-Highlight-Waterproof-Makeup/dp/B07MQJRK7N/ref=sxin_24_ac_d_rm?ac_md=0-0-bWFrZSB1cA%3D%3D-ac_d_rm_rm_rm&content-id=amzn1.sym.b09913c7-88ee-4b06-b977-3fd4ebd29a25%3Aamzn1.sym.b09913c7-88ee-4b06-b977-3fd4ebd29a25&crid=1XNMLTMZY689V&cv_ct_cx=make+up&keywords=make+up&pd_rd_i=B07MQJRK7N&pd_rd_r=1dd2b631-ffea-43c8-ae08-8ddf60cf8e59&pd_rd_w=eDiSQ&pd_rd_wg=TlgL6&pf_rd_p=b09913c7-88ee-4b06-b977-3fd4ebd29a25&pf_rd_r=2P3HF3KY6J08SR6GP9JT&qid=1673522679&sprefix=ma%2Caps%2C1427&sr=1-1-7d9bfb42-6e38-4445-b604-42cab39e191b",
+       "rating": 4.4
+ 
+      },
+      {
+       "id": 26,
+       "shop": "Jumia",
+       "name": "Make Up Cosmetics",
+       "price": 2600,
+       "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/6317211/1.jpg?6501",
+        "link": "https://www.jumia.co.ke/generic-make-up-cosmetic-acrylic-organisers-112713697.html",
+       "rating": 0
+ 
+      },
+      {
+       "id": 27,
+       "shop": "Ebay",
+       "name": "Make Up Cosmetics",
+       "price": 38500,
+       "image_url" :"https://i.ebayimg.com/images/g/0fkAAOSwe1tjuy61/s-l500.png",
+        "link": "https://www.ebay.com/itm/155348797794?hash=item242b828962:g:0fkAAOSwe1tjuy61&amdata=enc%3AAQAHAAAAoNpoK5AETkwZIokDfwcxDYkiTVXWQDDWw5iNwYWCh6rXc96i%2FuZQ0VNpvUHzcxOuJF2bYrtEfMECz%2Flzs%2FW03ouqd6T04uM0EFPDlIyrR6lrvY35aWZlHQAyevLzsLHP2DeFBH4Npl0NB%2FYlfSGbPIYrCbU4l53e%2Fvzp6dIFl97IrJICd1roWuBqJzRWzN%2F%2BzlvL4%2BsQyx9rM3WcO9csK6M%3D%7Ctkp%3ABk9SR_jI-P63YQ",
+       "rating": 4
+ 
+      },
+
+
+    {
+       "id": 28,
+       "shop": "Kilimall",
+       "name": "Jewelry",
+       "price": 480,
+       "image_url" :"https://image.kilimall.com/kenya/shop/store/goods/6269/2022/10/166606295580660f1a29f00b9422b91d7bdae453ab39f_720.jpg.webp",
+        "link": "https://www.kilimall.co.ke/new/goods/18416255?gclid=EAIaIQobChMIhI35wfjB_AIVBPp3Ch3FkA8kEAQYAyABEgJNOPD_BwE",
+       "rating": 5
+      },
+      {
+       "id": 29,
+       "shop": "Jumia",
+       "name": "Jewelry",
+       "price": 509,
+       "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/46/518535/1.jpg?1886",
+        "link": "https://www.jumia.co.ke/fashion-6-pairsset-jewelry-womens-fashion-stud-diamond-pearl-earrings-gold-53581564.html",
+       "rating": 4.3
+  
+      },
+      {
+       "id": 30,
+       "shop": "Amazon",
+       "name": "Jewelry",
+       "price": 13500,
+        "image_url" :"https://m.media-amazon.com/images/I/6157aZW8FHL._AC_UY500_.jpg",
+        "link": "https://www.amazon.com/Diamond-Pearl-Earrings/s?k=Diamond+and+Pearl+Earrings&rh=p_36%3A23611062011&dc&qid=1673523507&rnid=23610954011&ref=sr_nr_p_36_1&ds=v1%3A86SFZ3dkqYdfE6fHbJfi58Jxs6TBGqx1m5Fsjf9GSWs",
+       "rating": 4.5
+  
+      },
+
+    {
+       "id": 31,
+       "shop": "Amazon",
+       "name": "Wig Headband",
+       "price": 3600,
+       "image_url" :"https://m.media-amazon.com/images/I/71r9HNBiOiL._SX425_.jpg",
+        "link": "https://www.amazon.com/Headband-Human-Glueless-Machine-natural/dp/B099363MFX/ref=sr_1_1?adgrpid=122267096622&gclid=EAIaIQobChMI3tX3l_rB_AIVxuFRCh3E6QKLEAAYASAAEgKLh_D_BwE&hvadid=585412407808&hvdev=c&hvlocphy=9076828&hvnetw=g&hvqmt=b&hvrand=13999292230008373616&hvtargid=kwd-423906193601&hydadcr=22366_13333112&keywords=headband%2Bhuman%2Bhair%2Bwig&qid=1673962679&sr=8-1&th=1",
+       "rating": 3.8
+      },
+      {
+       "id": 32,
+       "shop": "Jumia",
+       "name": "Wig Headband",
+       "price": 1999,
+       "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/92/986605/1.jpg?2209",
+        "link": "https://www.jumia.co.ke/fashion-kinky-synthetic-headband-wig-free-gift-inside-50668929.html",
+       "rating": 4.2
+  
+      },
+
+    {
+       "id": 33,
+       "shop": "Amazon",
+       "name": "Play Station",
+       "price": 52300,
+          "image_url" :"https://m.media-amazon.com/images/I/71PGvPXpk5L._SX522_.jpg",
+        "link": "https://www.amazon.com/PlayStation-4-Slim-500GB-Console-Discontinued/dp/B01M0RU6LY",
+       "rating": 4.8
+ 
+      },
+      {
+       "id": 34,
+       "shop": "Jumia",
+       "name": "Play Station",
+       "price": 64400,
+       "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/54/186812/1.jpg?6338",
+        "link": "https://www.jumia.co.ke/sony-computer-entertainment-playstation-4-slim-500gb-console-21868145.html",
+       "rating": 4.9
+ 
+      },
+      {
+       "id": 35,
+       "shop": "Ebay",
+       "name": "Play Station",
+       "price": 32000,
+       "image_url" :"https://i.ebayimg.com/images/g/LkIAAOSwyatixYZ5/s-l500.jpg",
+        "link": "https://www.ebay.com/itm/314329985375?epid=13031982632&hash=item492f86f15f:g:LkIAAOSwyatixYZ5&amdata=enc%3AAQAHAAAA0PhdYDATXg5%2BfEVeFWGrg8oR%2Fq8RHqBLm%2Fp1e6rLBbd3HKpbthPvnMWz%2BMyW86VxehMLzGcN0GZt184SQKIb7Ko%2FkPWyJVElrYDsa3JCnCCaEpjptmPFvuhuvlOERe4z4oJFLi2pQcgpYnciVbh%2FQh2kSSgIYS%2FOYR6l%2FWHfy8VHm421T4f7aN7Lupl8%2B502ohFd4dbqH0PUD8fTrzdo%2Bo5Iq4ULr2bLF4%2FzNh9ynsBClb0ER2ITeDrfy4puhjnYEWFCdGohKdoxLC9BS1oSmQ4%3D%7Ctkp%3ABFBM9szX_7dh",
+       "rating": 4.3
+ 
+      },
+     
+    {
+       "id": 36,
+       "shop": "Amazon",
+       "name": "Sneakers",
+       "price": 4000 ,
+          "image_url" :"https://m.media-amazon.com/images/I/71bjQjr2NfL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com/s?k=amazon+men%27s+sneakers&adgrpid=80016917502&gclid=EAIaIQobChMIhNqAm4PC_AIVwo1oCR2F0gQdEAAYASAAEgImSPD_BwE&hvadid=585412618942&hvdev=c&hvlocphy=9076828&hvnetw=g&hvqmt=b&hvrand=16396610888191525858&hvtargid=kwd-298616023859&hydadcr=22364_13333114&tag=hydglogoo-20&ref=pd_sl_9o3ws5rbbs_b",
+       "rating": 4.5
+ 
+      },
+      {
+       "id": 36,
+       "shop": "Jumia",
+       "name": "Sneakers",
+       "price": 1090,
+       "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/61/329703/1.jpg?7116",
+        "link": "https://www.jumia.co.ke/mens-sneakers-fashion-shoes-mens-shoes-generic-mpg344460.html",
+       "rating": 4.0
+ 
+      },
+      {
+       "id": 37,
+       "shop": "Ebay",
+       "name": "Sneakers",
+       "price": 4350,
+       "image_url" :"https://i.ebayimg.com/images/g/S4oAAOSwzLhhbmH0/s-l500.jpg",
+        "link": "https://www.ebay.com/itm/304191097211?hash=item46d333c97b:g:emEAAOSwWhVhbmHx&amdata=enc%3AAQAHAAAA4MzmDvLvTAozLslZ775W6OEELcr5pi64773OZjEH1Rr492H7d253o4q9yAsa8ycv3AyRMLD9gL1vDcDkTAMvw4NOrqQykteFP%2B7%2FFD2dtAi5VAOkbgyyWVIx%2FeoNCR2SkVcyBl%2FdbHdnqzPVRSRhb1tARQhTbVfiE9PbVclQOVqvOM8W%2Byg0EY%2FjOoMRofJwyuL0DaqHw0j84yRkC46xEaN98GlQ%2FZMqV6k0eYHO86u5nb9qXm6ETU4iN2R9cl7%2BTe%2FIEZvyZ7ZNT8QHWcK%2BQOpS2M455DdYoTKQ4IiL%2BZrg%7Ctkp%3ABk9SR6Ty-v-3YQ",
+       "rating": 4.1
+ 
+      },
+
+    {
+       "id": 38,
+       "shop": "Amazon",
+       "name": "Mouse",
+       "price": 900,
+       "image_url" :"https://m.media-amazon.com/images/I/91IdFoP8cEL._AC_UY218_.jpg",
+        "link": "https://www.amazon.com/s?k=amazon+wireless+mouse&adgrpid=83209881724&gclid=EAIaIQobChMI7b-35ofC_AIVIfbVCh2LHQXdEAAYASAAEgI_MPD_BwE&hvadid=585479825225&hvdev=c&hvlocphy=9076828&hvnetw=g&hvqmt=b&hvrand=5517016993802521242&hvtargid=kwd-322570962234&hydadcr=29137_14573968&tag=hydglogoo-20&ref=pd_sl_7gpij5twht_b",
+       "rating": 4.8
+  
+      },
+      {
+       "id": 39,
+       "shop": "Jumia",
+       "name": "Mouse",
+       "price": 450,
+       "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/38/222253/1.jpg?1905",
+        "link": "https://www.jumia.co.ke/ultra-thin-wireless-mouse-2.4g-rechargeable-generic-mpg274617.html",
+       "rating": 4.5
+  
+      },
+      {
+       "id": 40,
+       "shop": "Ebay",
+       "name": "Mouse",
+       "price": 925,
+       "image_url" :"https://i.ebayimg.com/images/g/D~oAAOSwlrtizxl3/s-l500.jpg",
+        "link": "https://www.ebay.com/itm/275385310772?hash=item401e3e5e34:g:D~oAAOSwlrtizxl3&amdata=enc%3AAQAHAAAA0ADXovia1zJZa0UshVJxM4KOnnB6gQVeIMXCzmDAM09oxsQm0ipMB1lPGcHfXQF5vfsxBsN74g4I%2BHZIEg%2Fm8kG3u3EbwCJnJKNOA2L7t6gcHNZlml5%2FYdvzfqwVQIWnsvlUYslp3zN1weSq%2Fx5MGnE5amvLZ77JqTPyh0cPYaK6UmGLNYU7wRUrrbE3xwi9pEpOE2Fkgt8TmVHjiIy0EAVBouzALMENA4RA3eg1Cnt4cokpMpuPoubqiTzsuKK3qFP27xfkqWBIAcPhk%2FAPavQ%3D%7Ctkp%3ABFBMtpmo4LRh",
+       "rating": 4.9
+  
+      },
+
+    {
+       "id": 41,
+       "shop": "Amazon",
+       "name": "Perfume",
+       "price": 2700,
+       "image_url" :"https://m.media-amazon.com/images/I/81IvGrY17UL._SX425_.jpg",
+        "link": "https://www.amazon.com/Brown-Orchid-Edp-Perfume-Men/dp/B00Y1P79GS",
+       "rating": 4.4
+    
+      },
+      {
+       "id": 42,
+       "shop": "Jumia",
+       "name": "Perfume",
+       "price": 1349,
+       "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/28/042322/1.jpg?5528",
+        "link": "https://www.jumia.co.ke/perfume-for-men-edp-deo-spray-brown-orchid-mpg251947.html",
+       "rating": 4.3
+    
+      },
+      {
+       "id": 43,
+       "shop": "Ebay",
+       "name": "Perfume",
+       "price": 3000,
+       "image_url" :"https://i.ebayimg.com/images/g/rSoAAOSwJGpjBho9/s-l500.jpg",
+        "link": "https://www.ebay.com/itm/174570464541",
+       "rating": 4.1
+    
+      },
+
+    {
+       "id": 44,
+       "shop": "Amazon",
+       "name": "Smart Watch",
+       "price": 5302,
+          "image_url" :"https://m.media-amazon.com/images/I/61heuuDj1gL._AC_SX679_.jpg",
+        "link": "https://www.amazon.com/Oraimo-11N-Smart-Watch/dp/B09LQ84X2D",
+       "rating": 4.1
+      },
+      {
+       "id": 45,
+       "shop": "Jumia",
+       "name": "Smart Watch",
+       "price": 1890,
+        "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/97/684992/1.jpg?7065",
+        "link": "https://www.jumia.co.ke/dz09.-smartwatch-mpg330522.html",
+       "rating": 4.0
+  
+      },
+      {
+       "id": 46,
+       "shop": "Ebay",
+       "name": "Smart Watch",
+       "price": 4700,
+       "image_url" :"https://i.ebayimg.com/images/g/hRIAAOSwBFVjofTY/s-l500.png",
+        "link": "https://www.ebay.com/itm/354465996703",
+       "rating": 4.3
+  
+      },
+
+    {
+       "id": 47,
+       "shop": "Amazon",
+       "name": "Shaving Machine",
+       "price": 650,
+       "image_url" :"https://m.media-amazon.com/images/I/31A3wy6-YqL._SX300_SY300_QL70_FMwebp_.jpg",
+        "link": "https://www.amazon.in/Nova-NHT-1045-Rechargeable-Cordless-Black/dp/B00VT8CUHS/ref=sr_1_5?keywords=nova+hair+trimmer+for+men&qid=1673528821&sr=8-5",
+       "rating": 4.0 
+  
+      },
+      {
+       "id": 48,
+       "shop": "Jumia",
+       "name": "Shaving Machine",
+       "price": 3000,
+       "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/37/126147/1.jpg?5487",
+        "link": "https://www.jumia.co.ke/wahl-shaving-machine-74162173.html",
+       "rating": 3.0
+   
+      },
+      {
+       "id": 49,
+       "shop": "Alibaba",
+       "name": "Shaving Machine",
+       "price": 1400,
+        "image_url" :"https://s.alicdn.com/@sc04/kf/Hcb4c94e8b0194b749b1b676a0b982230p.jpg_960x960.jpg",
+        "link": "https://www.alibaba.com/product-detail/Wholesale-Barber-Supplies-Men-s-Hair_1600475405516.html?spm=a2700.7735675.0.0.50802660SAZ3Cp&s=p",
+       "rating": 4.6
+      },
+
+    {
+       "id": 50,
+       "shop": "Amazon",
+       "name": "Hair Dryer",
+       "price": 4000,
+       "image_url" :"https://m.media-amazon.com/images/I/71Zyw3LiZDL._SX425_.jpg",
+        "link": "https://www.amazon.com/Professional-Lightweight-Hairdryers-Concentrator-Certified/dp/B07WRP6TPR/ref=sr_1_2_sspa?keywords=2200+watt+hair+dryer&qid=1673964282&sr=8-2-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFZVzdVSFdORFRUVEsmZW5jcnlwdGVkSWQ9QTA1MjM1NjQyQklJMFAwNU5BUE5MJmVuY3J5cHRlZEFkSWQ9QTAxMTE4NTQyUlA1RjFRSTFQU1g5JndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==",
+       "rating": 4.5
+      },
+      {
+       "id": 51,
+       "shop": "Jumia",
+       "name": "Hair Dryer",
+       "price": 1480,
+       "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/11/851222/1.jpg?7167",
+        "link": "https://www.jumia.co.ke/2200w-hair-dryer-blow-dryer-hair-tools-6-gifts-fashion-mpg253954.html",
+       "rating": 4.0
+      },
+      {
+       "id": 52,
+       "shop": "Ebay",
+       "name": "Hair Dryer",
+       "price": 700,
+       "image_url" :"https://s.alicdn.com/@sc04/kf/H7050c461aca445faab36d519cc082d552.jpg_960x960.jpg",
+        "link": "https://www.alibaba.com/product-detail/Hot-selling-household-hair-dryer-low_1600334077602.html?spm=a2700.pc_countrysearch.main07.37.17445455RELPi7",
+       "rating": 1.0
+     
+      },
+
+    {
+       "id": 53,
+       "shop": "Amazon",
+       "name": "Glasses",
+       "price": 1700,
+       "image_url" :"https://m.media-amazon.com/images/I/61e2hOHPvxL._AC_UX522_.jpg",
+        "link": "hhttps://www.amazon.com/Brigtlaiff-Blocking-Glasses-Computer-Eyestrain/dp/B08J2DK6BZ/ref=sr_1_1?adgrpid=96375140549&gclid=EAIaIQobChMIrfikrJnC_AIVpIxoCR3uOQYxEAAYASAAEgLRaPD_BwE&hvadid=585359104275&hvdev=c&hvlocphy=9076828&hvnetw=g&hvqmt=b&hvrand=3077885662926301936&hvtargid=kwd-320283408867&hydadcr=2776_13541847&keywords=round+computer+glasses&qid=1673964631&s=electronics&sr=1-1",
+       "rating": 4.5
+
+      },
+      {
+       "id": 54,
+       "shop": "Jumia",
+       "name": "Glasses",
+       "price": 986,
+       "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/29/193133/1.jpg?4931",
+        "link": "https://www.jumia.co.ke/fashion-computer-glasses-tr90-frame-eyewear-spectacles-33139192.html",
+       "rating": 5.0
+
+      },
+      {
+       "id": 55,
+       "shop": "Ebay",
+       "name": "Glasses",
+       "price": 1400,
+       "image_url" :"https://i.ebayimg.com/images/g/FPoAAOSw3ZxhaSdT/s-l500.jpg",
+        "link": "https://www.ebay.com/itm/265361734154",
+       "rating": 4.3
+
+      },
+    {
+       "id": 56,
+       "shop": "Amazon",
+       "name": "Headsets",
+       "price": 3900,
+        "image_url" :"https://m.media-amazon.com/images/I/81g2-AWlq1L._AC_SX425_.jpg",
+        "link": "https://www.amazon.com/Enhanced-Headphone-Playstation-Smartphone-Cancelling-4/dp/B075XJH533",
+       "rating": 4.1
+
+      },
+      {
+       "id": 57,
+       "shop": "Jumia",
+       "name": "Headsets",
+       "price": 2499,
+       "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/43/330592/1.jpg?0978",
+        "link": "https://www.jumia.co.ke/beexcellent-gm-1-gaming-headset-ps4-video-games-compatible-29503334.html",
+       "rating": 4.5
+
+      },
+      {
+       "id": 58,
+       "shop": "Ebay",
+       "name": "Headsets",
+       "price": 2190,
+        "image_url" :"https://i.ebayimg.com/images/g/NFcAAOSw~kVgdM0B/s-l500.jpg",
+        "link": "https://www.ebay.com/itm/224422487632",
+       "rating": 4.3
+
+      },
+
+    {
+       "id": 59,
+       "shop": "Alibaba",
+       "name": "Beard Oils",
+       "price": 500,
+       "image_url" :"https://i.ebayimg.com/images/g/NFcAAOSw~kVgdM0B/s-l500.jpg",
+        "link": "https://www.alibaba.com/premium/beard_oils_for_men.html?p4phangyebuliu=1&src=sem_ggl&field=UG&from=sem_ggl&cmpgn=18084521233&adgrp=141161843955&fditm=&tgt=kwd-398905751942&locintrst=&locphyscl=9076828&mtchtyp=p&ntwrk=g&device=c&dvcmdl=&creative=617858590218&plcmnt=&plcmntcat=&aceid=&position=&gclid=EAIaIQobChMI_obz7pvC_AIV-xkGAB1TqwnGEAAYASAAEgJXQvD_BwE",
+       "rating": 4.5
+ 
+      },
+      {
+       "id": 60,
+       "shop": "Jumia",
+       "name": "Beard Oils",
+       "price": 296,
+       "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/47/682844/1.jpg?1322",
+        "link": "https://www.jumia.co.ke/for-soft-strong-beard-and-mustache-growth-30ml-beard-oil-mpg420412.html",
+       "rating": 4.0
+ 
+      },
+      {
+       "id": 61,
+       "shop": "Ebay",
+       "name": "Beard Oils",
+       "price": 200,
+       "image_url" :"https://i.ebayimg.com/images/g/xi4AAOSwx2dYI3Ak/s-l500.jpg",
+        "link": "https://www.ebay.com/itm/142175143405?hash=item211a4c85ed:g:xi4AAOSwx2dYI3Ak&amdata=enc%3AAQAHAAAA0Gjl%2Boumo3c1wWkly8EmgrRa4MZl98zbj9oAmGhrekzDvxuES0335%2FhbwaggSO7XmwzravNelhEkDZUp1SyrNNW%2FzfTfYIcTa%2F%2Fp2%2FRtAtSDeVc8ZVo0t%2FcyB5V4%2BTZLlL0HS2eh2cqA3xMWf8IarUxGrOZD%2FT5q6vZ3hBnm%2BYfEUAZLSqPO9nE2kP%2B9t1Z3a0uqOKmtUexnhx3wrjSSGdmeX%2B%2BneZe6AqyVgqsjV71s%2F6o4jWeA7IFz1ys2hgAk3qQ5t9YgJ%2FoIMWLmUremGGU%3D%7Ctkp%3ABFBM9IG0gbhh",
+       "rating": 4.2
+ 
+      },
+
+      {
+       "id": 62,
+       "shop": "Jumia",
+       "name": "Boxers",
+       "price": 625,
+       "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/91/432928/1.jpg?7106",
+        "link": "https://www.jumia.co.ke/fashion-6pcs-soft-cotton-checked-mens-boxers-multicolor-82923419.html",
+       "rating": 3.9
+
+      },
+      {
+       "id": 63,
+       "shop": "Ebay",
+       "name": "Boxers",
+       "price": 250,
+        "image_url" :"https://i.ebayimg.com/images/g/mS4AAOSw8NtfyTjs/s-l500.jpg",
+        "link": "https://www.ebay.com/b/Cotton-Multicolor-Mens-Boxer-Shorts/11507/bn_109217197",
+       "rating": 4.1
+
+      },
+
+    {
+       "id": 64,
+       "shop": "Amazon",
+       "name": "Smart Tv",
+       "price": 17000,
+       "image_url" :"https://m.media-amazon.com/images/I/51EOfJxElNL._AC_.jpg",
+        "link": "https://www.amazon.com/amazon-fire-tv-43-inch-4-series-4k-smart-tv/dp/B08SWD2SCK/ref=sr_1_1_sspa?adgrpid=84139029489&gclid=EAIaIQobChMIg6jv6aDC_AIVrQUGAB3LhgGFEAAYASAAEgJCr_D_BwE&hvadid=585479456549&hvdev=c&hvlocphy=9076828&hvnetw=g&hvqmt=b&hvrand=17980863464189821549&hvtargid=kwd-21165616&hydadcr=22332_13333118&keywords=43+inch+tv&qid=1673965261&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyUDA1RTNaSzNNWk5MJmVuY3J5cHRlZElkPUEwNTk2OTgxSlRLMVdTWTAyRkdFJmVuY3J5cHRlZEFkSWQ9QTA1MTE4MDdGUEJUTVVFSkhCWFAmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl",
+       "rating": 4.2
+ 
+      },
+      {
+       "id": 65,
+       "shop": "Jumia",
+       "name": "Smart Tv",
+       "price": 21999,
+       "image_url" :"https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/64/434378/1.jpg?0797",
+        "link": "https://www.jumia.co.ke/vitron-4368fs-43-full-hd-smart-android-tv-netflix-youtube-87343446.html",
+       "rating": 4.2
+ 
+      }
+    
   ]
   }

@@ -43,7 +43,7 @@ function Register(onLogin) {
 
   function handleClick(e) {
     e.preventDefault();
-    fetch("http://localhost:4000/signup", {
+    fetch("http://localhost:4000/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

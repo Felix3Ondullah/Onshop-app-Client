@@ -11,8 +11,8 @@ function Search() {
   const [productsPerPage] = useState(10);
   const [sortOrder, setSortOrder] = useState("ascending");
 
-  useEffect(() => {
-    fetch("http://localhost:3008/products")
+  useEffect((searchTerm) => {
+    fetch(`http://localhost:3005/products?search=${searchTerm}`)
       .then((response) => response.json())
       .then((data) => setProducts(data));
   }, []);
@@ -60,7 +60,7 @@ function Search() {
     <div className="mainsection">
       <div style={{ display: "flex", flexWrap: "wrap", margin: "95px" }}>
         <form
-          style={{ margin: "30px 250px" }}
+          style={{ margin: "30px 400px" }}
           onSubmit={(event) => event.preventDefault()}
         >
           <Input
@@ -79,7 +79,7 @@ function Search() {
           <Button onClick={() => setSearchTerm("")} size="large">
             Clear Search
           </Button>
-          <div style={{ margin: "6px" }}>
+          <div style={{ margin: "7px" }}>
             <Select
               size="large"
               defaultValue="price"
@@ -105,12 +105,18 @@ function Search() {
             </Select>
           </div>
         </form>
-        <div style={{ display: "flex", flexWrap: "wrap", margin: "40px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", margin: "70px" }}>
           {currentProducts.map((product) => (
             <Card
+              
               key={product.id}
-              cover={<img src={product.image} alt={product.name} />}
-              style={{ width: 200, margin: "20px" }}
+              cover={<img className="product-image"  src={product.image_url} alt={product.name} />}
+              actions={[
+                <a href={product.link} target="_blank" rel="noopener noreferrer">
+                  Visit Site
+                </a>
+              ]}
+              style={{ width: 250, margin: "20px" }}
               title={product.shop}
             >
               <Card.Meta
