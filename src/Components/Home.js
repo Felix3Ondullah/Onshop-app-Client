@@ -31,17 +31,16 @@ function Home() {
             <Col sm={5}>
               <h1 class="font-weigh-light">
                 <strong>Search </strong> And <strong> Compare </strong> Products
-                With On-Shop
+                With On-Shop, Your <strong>  Ultimate Shopping </strong> Companion 
               </h1>
               <p class="mt-4 " style={{ fontSize: "16px" }}>
-                On-Shop is your ultimate shopping companion. Our app helps you
-                search and compare products from a wide range of retailers, all
-                in one place. Whether you're looking for the latest gadgets,
-                fashion items, or home essentials, On-Shop makes it easy to find
-                what you need. With our advanced search and filtering options,
-                you can narrow down your options and find the perfect product at
-                the right price. Never overspend again with On-Shop - the
-                ultimate tool for savvy shoppers.
+                Our app helps you search and compare products from a wide range
+                of retailers, all in one place. Whether you're looking for the
+                latest gadgets, fashion items, or home essentials, On-Shop makes
+                it easy to find what you need. With our advanced search and
+                filtering options, you can narrow down your options and find the
+                perfect product at the right price. Never overspend again with
+                On-Shop - the ultimate tool for savvy shoppers.
               </p>
               <div>
                 <Button

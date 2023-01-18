@@ -11,8 +11,8 @@ function Search() {
   const [productsPerPage] = useState(10);
   const [sortOrder, setSortOrder] = useState("ascending");
 
-  useEffect((searchTerm) => {
-    fetch(`http://localhost:3005/products?search=${searchTerm}`)
+  useEffect(() => {
+    fetch('http://localhost:3007/products')
       .then((response) => response.json())
       .then((data) => setProducts(data));
   }, []);
@@ -105,7 +105,7 @@ function Search() {
             </Select>
           </div>
         </form>
-        <div style={{ display: "flex", flexWrap: "wrap", margin: "70px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", margin: "60px" }}>
           {currentProducts.map((product) => (
             <Card
               
@@ -121,7 +121,7 @@ function Search() {
             >
               <Card.Meta
                 title={product.name}
-                description={`Price: ${product.price} | Rating: ${product.rating} | Discount: ${product.discount}  `}
+                description={`Price: ${product.price} | Rating: ${product.rating}   `}
               />
               {/* <p>Price: {product.price}</p>
           <p>Rating: {product.rating}</p> */}
