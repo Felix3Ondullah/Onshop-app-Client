@@ -36,26 +36,32 @@ function Register(onLogin) {
   //   navigate("/login");
   // };
   const navigate = useNavigate();
-  const [username, setUserName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [passwordConfirmation, setPasswordConfirmation] = useState("");
+  const [username, setUserName] = useState('collow');
+  const [email, setEmail] = useState('collow@gmail.com');
+  const [password, setPassword] = useState('123456');
+  const [passwordConfirmation, setPasswordConfirmation] = useState("123456");
 
-  function handleClick(e) {
+  function handleSubmit(e) {
     e.preventDefault();
     fetch("http://localhost:4000/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        username,
-        email,
-        password,
-        password_confirmation: passwordConfirmation,
-      }),
+      body: JSON.stringify(
+        {
+          "user": {
+          username,
+          email,
+          password,
+          password_confirmation: passwordConfirmation,
+          }
+      }
+      ),
     })
+    
     .then((r) => {
+      console.log(username,email,password,passwordConfirmation)
       if (r.ok) {
         r.json().then((user) => onLogin(user));
         navigate('/login')
@@ -64,6 +70,7 @@ function Register(onLogin) {
           
           navigate('/register')
     }})
+    
   }
 
   return (
@@ -109,7 +116,7 @@ function Register(onLogin) {
                 />
 
                 <Button 
-                   onClick={handleClick} variant="contained" color="primary" fullWidth>
+                   onClick={handleSubmit} variant="contained" color="primary" fullWidth>
                   SIGN UP
                 </Button>
               </form>

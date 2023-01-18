@@ -36,27 +36,38 @@ function Login(onLogin)  {
   // const [errors, setErrors] = useState([]);
   // const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate()
+
   function handleClick(e) {
     e.preventDefault();
-    // setIsLoading(true);
     fetch("http://localhost:4000/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ username, password }),
-    }).then((r) => {
+      body: JSON.stringify(
+        {
+          "user": {
+          username,
+          password
+          }
+      }
+      ),
+    })
+    
+    .then((r) => {
+      console.log(username,password)
       if (r.ok) {
         r.json().then((user) => onLogin(user));
         navigate('/searchhistory')
-        alert("Login was Successful!")
-        
       } else {
           alert("Invalid Username or Password!")
           
           navigate('/login')
     }})
+    
   }
+  
+  
   const classes = useStyles();
 
   return (
