@@ -3,93 +3,92 @@ import { Table, Input, Pagination } from "antd";
 import "../Css/SearchHistory.css";
 
 const SearchHistory = () => {
-const [searchHistory, setSearchHistory] = useState([]);
-const [searchValue, setSearchValue] = useState("");
-const [currentPage, setCurrentPage] = useState(1);
-const [pageSize, setPageSize] = useState(8);
+  const [searchHistory, setSearchHistory] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageSize, setPageSize] = useState(10);
 
-useEffect(() => {
-fetchSearchHistory();
-}, []);
+  useEffect(() => {
+    fetchSearchHistory();
+  }, []);
 
-const fetchSearchHistory = async () => {
-try {
-const response = await fetch("http://localhost:3008/products");
-const data = await response.json();
-setSearchHistory(data);
-} catch (error) {
-console.log(error);
-}
-};
+  const fetchSearchHistory = async () => {
+    try {
+      const response = await fetch("http://localhost:3008/products");
+      const data = await response.json();
+      setSearchHistory(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-const handleSearch = (e) => {
-setSearchValue(e.target.value);
-};
+  const handleSearch = (e) => {
+    setSearchValue(e.target.value);
+  };
 
-const handlePageChange = (page) => {
-setCurrentPage(page);
-};
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
 
-const handlePageSizeChange = (current, size) => {
-setPageSize(size);
-};
+  const handlePageSizeChange = (current, size) => {
+    setPageSize(size);
+  };
 
-const filteredHistory = searchHistory.filter((history) => {
-return history.name.toLowerCase().includes(searchValue.toLowerCase());
-});
+  const filteredHistory = searchHistory.filter((history) => {
+    return history.name.toLowerCase().includes(searchValue.toLowerCase());
+  });
 
-const paginatedHistory = filteredHistory.slice(
-(currentPage - 1) * pageSize,
-currentPage * pageSize
-);
+  const paginatedHistory = filteredHistory.slice(
+    (currentPage - 1) * pageSize,
+    currentPage * pageSize
+  );
 
-const columns = [
-{
-title: "Product Name",
-dataIndex: "name",
-key: "name",
-},
-{
-title: "Price",
-dataIndex: "price",
-key: "price",
-},
-{
-  title: "Rating",
-  dataIndex: "rating",
-  key: "rating",
-  },
-  {
-    title: "Discount",
-    dataIndex: "discount",
-    key: "discount",
+  const columns = [
+    {
+      title: "Product Name",
+      dataIndex: "name",
+      key: "name",
     },
+    {
+      title: "Price",
+      dataIndex: "price",
+      key: "price",
+    },
+    {
+      title: "Rating",
+      dataIndex: "rating",
+      key: "rating",
+    },
+    {
+      title: "Discount",
+      dataIndex: "discount",
+      key: "discount",
+    },
+  ];
 
-];
-
-return (
-  <div className="mainsection">
-<div style={{ marginTop: -90 , width: "95%"}}>
-<Input
-     placeholder="Search Your History"
-     value={searchValue}
-     onChange={handleSearch}
-   />
-<Table
-     dataSource={paginatedHistory}
-     columns={columns}
-     pagination={false}
-   />
-<Pagination
-defaultCurrent={1}
-total={filteredHistory.length}
-onChange={handlePageChange}
-showSizeChanger
-onShowSizeChange={handlePageSizeChange}
-/>
-</div>
-</div>
-);
+  return (
+    <div className="mainsection">
+      <div style={{ marginTop: -90, width: "95%" }}>
+        <Input
+          placeholder="Search Your History"
+          value={searchValue}
+          onChange={handleSearch}
+        />
+        <Table
+          dataSource={paginatedHistory}
+          columns={columns}
+          pagination={false}
+        />
+        <Pagination
+          defaultCurrent={1}
+          total={filteredHistory.length}
+          onChange={handlePageChange}
+          showSizeChanger
+          onShowSizeChange={handlePageSizeChange}
+        />
+      </div>
+    </div>
+  );
 };
 
 export default SearchHistory;
