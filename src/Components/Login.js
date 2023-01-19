@@ -58,6 +58,7 @@ function Login(onLogin)  {
       console.log(username,password)
       if (r.ok) {
         r.json().then((user) => onLogin(user));
+        alert("Login was successful!")
         navigate('/searchhistory')
       } else {
           alert("Invalid Username or Password!")

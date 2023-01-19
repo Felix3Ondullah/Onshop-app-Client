@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Card, Input, Button, Pagination, Select } from "antd";
 import "../Css/Search.css";
+import axios from "axios";
 
 function Search() {
   const [products, setProducts] = useState([]);
@@ -8,31 +9,29 @@ function Search() {
   const [sortBy, setSortBy] = useState("price");
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [productsPerPage] = useState(10);
+  const [productsPerPage] = useState(4);
   const [sortOrder, setSortOrder] = useState("ascending");
 
   const handleSearch = () => {
-    console.log("=========sasa========")
-    fetch('http://127.0.0.1:4000/search', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
+    axios
+      .post("http://127.0.0.1:4000/search", {
         search_term,
         sortBy,
-        sortOrder
+        sortOrder,
       })
-    })
-      .then((response) => response.json()) 
-      .then((data) => setProducts(data));
-  }
+      .then((response) => {
+        setProducts(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   //filtering and sorting of products
   useEffect(() => {
-    if(!products) return;
+    if (!products) return;
     let filteredData = products.filter((product) => {
-      if(product && product.name)
+      if (product && product.name)
         return product.name.toLowerCase().includes(search_term.toLowerCase());
       return false;
     });
@@ -51,7 +50,6 @@ function Search() {
     }
     setFilteredProducts(filteredData);
   }, [search_term, sortBy, sortOrder, products]);
-
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -76,68 +74,72 @@ function Search() {
     <div className="mainsection">
       <div style={{ display: "flex", flexWrap: "wrap", margin: "95px" }}>
         <form
-          style={{ margin: "30px 400px" }}
+          style={{ margin: "1px 300px" }}
           onSubmit={(event) => event.preventDefault()}
         >
           <Input
             placeholder="Search Products Here"
             allowClear
-            style={{
-              width: 500,
-            }}
+            style={{ width: 700 }}
             size="large"
             value={search_term}
             onChange={(event) => setSearch_term(event.target.value)}
           />
-          <Button type="primary" htmlType="submit" onClick={handleSearch}   size="large">
+          <div style={{ margin: "5px" }}></div>
+          <Button type="primary" onClick={handleSearch}>
             Search Product
           </Button>
-          <Button onClick={() => setSearch_term("")} size="large">
+
+          <Button
+            onClick={() => {
+              setSearch_term("");
+              setFilteredProducts([]);
+            }}
+          >
             Clear Search
           </Button>
-          <div style={{ margin: "7px" }}>
-            <Select
-              size="large"
-              defaultValue="price"
-              onChange={handleSortChange}
-            >
+          <div style={{ margin: "5px" }}>
+            <Select defaultValue="price" onChange={handleSortChange}>
               <Select.Option value="price">Compare by Price</Select.Option>
               <Select.Option value="rating">Compare by Rating</Select.Option>
-              <Select.Option value="discount">
-                Compare by Discount
-              </Select.Option>
-            </Select>
-            <Select
-              size="large"
-              defaultValue="ascending"
-              onChange={handleOrderChange}
-            >
+              
+            </Select >
+            <Select defaultValue="ascending" onChange={handleOrderChange}>
               <Select.Option value="ascending">
-                Compare From The Lowest
+                Compare From The Highest
               </Select.Option>
               <Select.Option value="decending">
-                Compare From The Highest{" "}
+                Compare From The Lowest{" "}
               </Select.Option>
             </Select>
           </div>
         </form>
-        <div style={{ display: "flex", flexWrap: "wrap", margin: "70px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", margin: "50px" }}>
           {currentProducts.map((product) => (
             <Card
-              
               key={product.id}
-              cover={<img className="product-image"  src={product.image_url} alt={product.name} />}
+              cover={
+                <img
+                  className="product-image"
+                  src={product.image_url}
+                  alt={product.name}
+                />
+              }
               actions={[
-                <a href={product.link} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={product.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Visit Site
-                </a>
+                </a>,
               ]}
               style={{ width: 250, margin: "20px" }}
               title={product.shop}
             >
               <Card.Meta
-                title={product.name}
-                description={`Price: ${product.price} | Rating: ${product.rating}  `}
+                // title={product.name}
+                description={`Price: Ksh ${product.price} | Rating: ${product.rating}  `}
               />
               {/* <p>Price: {product.price}</p>
           <p>Rating: {product.rating}</p> */}
