@@ -30,9 +30,12 @@ function Search() {
 
   //filtering and sorting of products
   useEffect(() => {
-    let filteredData = products.filter((product) =>
-      product.name.toLowerCase().includes(search_term.toLowerCase())
-    );
+    if(!products) return;
+    let filteredData = products.filter((product) => {
+      if(product && product.name)
+        return product.name.toLowerCase().includes(search_term.toLowerCase());
+      return false;
+    });
     if (sortBy === "price") {
       filteredData.sort((a, b) => (a.price > b.price ? 1 : -1));
     } else if (sortBy === "rating") {
@@ -48,6 +51,7 @@ function Search() {
     }
     setFilteredProducts(filteredData);
   }, [search_term, sortBy, sortOrder, products]);
+
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
