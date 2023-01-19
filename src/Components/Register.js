@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Container,
@@ -9,7 +9,6 @@ import {
 } from "@material-ui/core";
 import backgroundImage from "../Assets/back1.jpg";
 import { useNavigate } from "react-router-dom";
-
 
 const useStyles = makeStyles((theme) => ({
   contactUs: {
@@ -36,9 +35,9 @@ function Register(onLogin) {
   //   navigate("/login");
   // };
   const navigate = useNavigate();
-  const [username, setUserName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUserName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
 
   function handleSubmit(e) {
@@ -48,34 +47,33 @@ function Register(onLogin) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(
-        {
-          "user": {
+      body: JSON.stringify({
+        user: {
           username,
           email,
           password,
           password_confirmation: passwordConfirmation,
-          }
-      }
-      ),
-    })
-    
-    .then((r) => {
-      console.log(username,email,password,passwordConfirmation)
+        },
+      }),
+    }).then((r) => {
+      console.log(username, email, password, passwordConfirmation);
       if (r.ok) {
         r.json().then((user) => onLogin(user));
-        navigate('/login')
+
+        alert("Account Registration was successful");
+
+        navigate("/login");
       } else {
-          alert("Invalid Username or Password!")
-          
-          navigate('/register')
-    }})
-    
+        alert("Invalid Username or Password!");
+
+        navigate("/register");
+      }
+    });
   }
 
   return (
     <div className={classes.contactUs}>
-      <Container style={{ marginTop: -100 , width: "95%"}}>
+      <Container style={{ marginTop: -100, width: "95%" }}>
         <Grid container justify="center" alignItems="center">
           <Grid item xs={12} sm={8} md={6} lg={4}>
             <div className={classes.formContainer}>
@@ -88,35 +86,42 @@ function Register(onLogin) {
                   margin="normal"
                   label="Name"
                   variant="outlined"
-                  value={username} onChange={e => setUserName(e.target.value)}
-
+                  value={username}
+                  onChange={(e) => setUserName(e.target.value)}
                 />
                 <TextField
                   fullWidth
                   margin="normal"
                   label="Email"
                   variant="outlined"
-                  value={email} onChange={e => setEmail(e.target.value)}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
-                 <TextField
+                <TextField
                   fullWidth
                   margin="normal"
                   label="Password"
-                  type = "password"
+                  type="password"
                   variant="outlined"
-                  value={password} onChange={e => setPassword(e.target.value)}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
-                   <TextField
+                <TextField
                   fullWidth
                   margin="normal"
                   label="Confirm Password"
-                  type = "password"
+                  type="password"
                   variant="outlined"
-                  value={passwordConfirmation} onChange={e => setPasswordConfirmation(e.target.value)}
+                  value={passwordConfirmation}
+                  onChange={(e) => setPasswordConfirmation(e.target.value)}
                 />
 
-                <Button 
-                   onClick={handleSubmit} variant="contained" color="primary" fullWidth>
+                <Button
+                  onClick={handleSubmit}
+                  variant="contained"
+                  color="primary"
+                  fullWidth
+                >
                   SIGN UP
                 </Button>
               </form>

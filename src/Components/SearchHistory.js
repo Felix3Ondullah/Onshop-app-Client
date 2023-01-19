@@ -14,7 +14,7 @@ const SearchHistory = () => {
 
   const fetchSearchHistory = async () => {
     try {
-      const response = await fetch("http://localhost:3008/products");
+      const response = await fetch("http://localhost:4000/search");
       const data = await response.json();
       setSearchHistory(data);
     } catch (error) {
