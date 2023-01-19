@@ -4,22 +4,34 @@ import "../Css/Search.css";
 
 function Search() {
   const [products, setProducts] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [search_term, setSearch_term] = useState("");
   const [sortBy, setSortBy] = useState("price");
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(10);
   const [sortOrder, setSortOrder] = useState("ascending");
 
-  useEffect(() => {
-    fetch('http://localhost:3007/products')
-      .then((response) => response.json())
+  const handleSearch = () => {
+    console.log("=========sasa========")
+    fetch('http://127.0.0.1:4000/search', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        search_term,
+        sortBy,
+        sortOrder
+      })
+    })
+      .then((response) => response.json()) 
       .then((data) => setProducts(data));
-  }, []);
+  }
+
   //filtering and sorting of products
   useEffect(() => {
     let filteredData = products.filter((product) =>
-      product.name.toLowerCase().includes(searchTerm.toLowerCase())
+      product.name.toLowerCase().includes(search_term.toLowerCase())
     );
     if (sortBy === "price") {
       filteredData.sort((a, b) => (a.price > b.price ? 1 : -1));
@@ -35,7 +47,7 @@ function Search() {
       filteredData.sort((a, b) => (a.descending > b.descending ? 1 : -1));
     }
     setFilteredProducts(filteredData);
-  }, [searchTerm, sortBy, sortOrder, products]);
+  }, [search_term, sortBy, sortOrder, products]);
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -70,13 +82,13 @@ function Search() {
               width: 500,
             }}
             size="large"
-            value={searchTerm}
-            onChange={(event) => setSearchTerm(event.target.value)}
+            value={search_term}
+            onChange={(event) => setSearch_term(event.target.value)}
           />
-          <Button type="primary" htmlType="submit" size="large">
+          <Button type="primary" htmlType="submit" onClick={handleSearch}   size="large">
             Search Product
           </Button>
-          <Button onClick={() => setSearchTerm("")} size="large">
+          <Button onClick={() => setSearch_term("")} size="large">
             Clear Search
           </Button>
           <div style={{ margin: "7px" }}>
@@ -105,7 +117,7 @@ function Search() {
             </Select>
           </div>
         </form>
-        <div style={{ display: "flex", flexWrap: "wrap", margin: "60px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", margin: "70px" }}>
           {currentProducts.map((product) => (
             <Card
               
@@ -121,7 +133,7 @@ function Search() {
             >
               <Card.Meta
                 title={product.name}
-                description={`Price: ${product.price} | Rating: ${product.rating}   `}
+                description={`Price: ${product.price} | Rating: ${product.rating}  `}
               />
               {/* <p>Price: {product.price}</p>
           <p>Rating: {product.rating}</p> */}

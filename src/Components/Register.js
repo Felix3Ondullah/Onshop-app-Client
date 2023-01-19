@@ -36,10 +36,10 @@ function Register(onLogin) {
   //   navigate("/login");
   // };
   const navigate = useNavigate();
-  const [username, setUserName] = useState('collow');
-  const [email, setEmail] = useState('collow@gmail.com');
-  const [password, setPassword] = useState('123456');
-  const [passwordConfirmation, setPasswordConfirmation] = useState("123456");
+  const [username, setUserName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [passwordConfirmation, setPasswordConfirmation] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
