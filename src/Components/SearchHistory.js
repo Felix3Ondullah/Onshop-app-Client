@@ -59,11 +59,7 @@ const SearchHistory = () => {
       dataIndex: "rating",
       key: "rating",
     },
-    {
-      title: "Discount",
-      dataIndex: "discount",
-      key: "discount",
-    },
+    
   ];
 
   return (
