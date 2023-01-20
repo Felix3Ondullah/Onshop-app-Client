@@ -1,7 +1,8 @@
-import React from 'react';
+import React,{ useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Container, Grid, Typography, TextField, Button } from '@material-ui/core';
 import backgroundImage from '../Assets/shopping2.jpg';
+import emailjs from '@emailjs/browser';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -25,6 +26,23 @@ const useStyles = makeStyles((theme) => ({
 function ContactUs() {
   const classes = useStyles();
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_bcxcqc6', 'template_jsar73s', form.current, 'LpXVUBPrCQJ-ZE3Sp')
+      .then((result) => {
+          console.log(result.text);
+          alert("Email sent successfully!");
+          form.current.reset();
+      }, (error) => {
+          console.log(error.text);
+          alert("Error: Email not sent. Please try again later.");
+      });
+  };
+
+
   return (
     <div  className={classes.contactUs}>
       <Container  >
@@ -34,18 +52,26 @@ function ContactUs() {
               <Typography variant="h5" gutterBottom align="center">
                 Get in Touch
               </Typography>
-              <form>
+              <form ref={form} onSubmit={sendEmail}>
                 <TextField
+          
                   fullWidth
                   margin="normal"
                   label="Name"
                   variant="outlined"
+                  type="text" 
+                  name="user_name"
                 />
+                
                 <TextField
                   fullWidth
                   margin="normal"
                   label="Email"
                   variant="outlined"
+                  type="email" 
+                  name="user_email"
+              
+                  
                 />
                 <TextField
                   fullWidth
@@ -54,8 +80,9 @@ function ContactUs() {
                   multiline
                   rows={4}
                   variant="outlined"
+                  name="message"
                 />
-                <Button variant="contained" color="primary" fullWidth>
+                <Button variant="contained" color="primary" type="submit" fullWidth>
                   Submit
                 </Button>
               </form>

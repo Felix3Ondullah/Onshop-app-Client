@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, Input, Button, Pagination, Select } from "antd";
+import { Card, Input, Button, Pagination, Select,Spin } from "antd";
 import "../Css/Search.css";
 import axios from "axios";
 
@@ -11,8 +11,11 @@ function Search() {
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(4);
   const [sortOrder, setSortOrder] = useState("ascending");
+  const [loading, setLoading] = useState(false);
+
 
   const handleSearch = () => {
+    setLoading(false);
     axios
       .post("http://127.0.0.1:4000/search", {
         search_term,
@@ -21,9 +24,11 @@ function Search() {
       })
       .then((response) => {
         setProducts(response.data);
+        setLoading(false);
       })
       .catch((error) => {
         console.log(error);
+        setLoading(false);
       });
   };
 
@@ -71,7 +76,11 @@ function Search() {
   };
 
   return (
+    <div className={loading ? 'hidden' : 'content'}>
     <div className="mainsection">
+          {loading && (
+            <Spin size="large" tip="Loading..." style={{ margin: 'auto' }} />
+        )}
       <div style={{ display: "flex", flexWrap: "wrap", margin: "95px" }}>
         <form
           style={{ margin: "1px 300px" }}
@@ -145,6 +154,7 @@ function Search() {
           <p>Rating: {product.rating}</p> */}
             </Card>
           ))}
+          
         </div>
         <Pagination
           defaultCurrent={1}
@@ -153,8 +163,11 @@ function Search() {
           onChange={handlePageChange}
           style={{ margin: "20px 0" }}
         />
+        
       </div>
     </div>
+    </div>
+    
   );
 }
 
