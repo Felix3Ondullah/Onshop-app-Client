@@ -14,3 +14,7 @@
     width: 200px; /* or any other fixed width value */
     height: 200px;
   }
+
+  .hidden{
+    display: none;
+ }
