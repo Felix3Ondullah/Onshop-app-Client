@@ -42,7 +42,7 @@ function Register(onLogin) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("http://localhost:4000/users", {
+    fetch("https://onshop-qdh1.onrender.com/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
